@@ -22,7 +22,6 @@ const Hero = () => {
                 ></div>
                 <div className="absolute inset-0"></div>
             </div>
-            <Particles />
 
 
 
@@ -53,20 +52,12 @@ const Hero = () => {
                     )}
                 </AnimatePresence>
 
-                <motion.p
-                    className="text-xl mb-8"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 1.2 }}
-                >
-                    testimony
-                </motion.p>
                 <motion.a
                     href="#"
                     className="inline-block px-6 py-3 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 1.5 }}
+                    transition={{ duration: 0.6, delay: 2 }}
                 >
                     Learn More
                 </motion.a>

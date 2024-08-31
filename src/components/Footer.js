@@ -16,13 +16,8 @@ const Footer = () => {
         { name: 'Silex', url: '/project-b' },
         { name: 'Gitlab', url: 'https://gitlab.com/gitlab-org/gitlab'}
     ];
-    const repos = [
-        'JeremyZXi/KeyCAS',
-        'KeyCAS-Doc/keycas-doc.github.io',
-        'JeremyZXi/CASLandingPage'
-    ];
     return (
-        <footer className="bg-[rgb(25,34,54)] text-white py-8 mt-8">
+        <footer className="bg-black text-white py-8 mt-8">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div>
@@ -47,7 +42,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Related Open-source Projects</h3>
+                        <h3 className="text-lg font-semibold mb-4">Related Projects</h3>
                         <ul className="space-y-2">
                             {relatedProjects.map((project) => (
                                 <li key={project.name}>
@@ -64,13 +59,6 @@ const Footer = () => {
                                 Contribute
                             </a>
 
-                        </div>
-
-                        {/* Alex Hoyau acknowledgment */}
-                        <div className="mt-4">
-                            <p className="text-sm">
-                                Big thanks to <a href="https://github.com/lexoyo" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Alex Hoyau</a> who has created <a href="https://www.silex.me/" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Silex</a>, the free web builder we used in our project, and been super helpful in answering our naive questions!
-                            </p>
                         </div>
                     </div>
                 </div>

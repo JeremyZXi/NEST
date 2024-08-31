@@ -150,14 +150,14 @@ const Navbar = () => {
             </nav>
 
             {isMenuOpen && (
-                <div className="fixed inset-0 bg-[rgb(25,34,54)] z-50 overflow-y-auto">
+                <div className="fixed inset-0 bg-black z-50 overflow-y-auto">
                     <div className="container mx-auto px-4 py-8">
                         <div className="flex justify-between items-center mb-8">
                             <div className="flex items-center gap-4">
                                 <img src="assets/logo.webp" alt="Logo" className="h-8" />
-                                <span className="text-2xl font-bold text-white">KA CAS Archive</span>
+                                <span className="text-2xl font-bold text-white">NEST</span>
                             </div>
-                            <button onClick={toggleMenu} className="text-white">
+                            <button onClick={toggleMenu} className="text-black">
                                 <X size={24} className={menuIconColor} />
                             </button>
                         </div>
