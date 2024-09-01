@@ -337,16 +337,47 @@ const SectionTest = () => {
     );
 };
 
+// 自定义小红书图标组件
+const XiaohongshuIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+        {/* 请用您实际的小红书SVG路径替换这里 */}
+        <path d="M10.0002 5.10557H14.0002V18.1056H10.0002V5.10557Z" />
+        <path d="M3.00024 9.10557H7.00024V18.1056H3.00024V9.10557Z" />
+        <path d="M17.0002 13.1056H21.0002V18.1056H17.0002V13.1056Z" />
+    </svg>
+);
+
 const SocialMediaContact = () => {
     const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 0.3,
+        threshold: 0.1,
     });
 
+    const containerVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5 }
+        }
+    };
+
     const contactInfo = [
-        { icon: faEnvelope, text: 'Email', info: 'nest.executives@outlook.com' },
-        { icon: faPhone, text: 'Phone', info: '+1 (234) 567-890' },
-        { icon: faFax, text: 'Fax', info: '+1 (234) 567-891' },
+        { icon: faEnvelope, text: 'Email', info: 'contact@example.com' },
+        { icon: faPhone, text: 'Phone', info: '+1 (123) 456-7890' },
+        { icon: faFax, text: 'Fax', info: '+1 (123) 456-7891' }
     ];
 
     const socialLinks = [
@@ -354,39 +385,17 @@ const SocialMediaContact = () => {
         { icon: faTwitter, text: 'Twitter', link: 'https://twitter.com/yourhandle', info: 'username' },
         { icon: faInstagram, text: 'Instagram', link: 'https://instagram.com/yourprofile', info: 'username' },
         { icon: faLinkedin, text: 'LinkedIn', link: 'https://linkedin.com/in/yourprofile', info: 'username' },
-        { icon: faBookOpen, text: '小红书', link: 'https://linkedin.com/in/yourprofile', info: 'username' }
+        { icon: 'xiaohongshu', text: 'Xiaohongshu', link: 'https://xiaohongshu.com/yourprofile', info: 'username' }
     ];
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-            },
-        },
-    };
-
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                type: 'spring',
-                stiffness: 100,
-            },
-        },
-    };
-
-    const renderContactBox = (contact, index) => (
+    const renderContactInfo = (contact, index) => (
         <motion.div
-            variants={itemVariants}
             className="flex flex-col items-center justify-center p-4 bg-gray-800 rounded-lg"
+            variants={itemVariants}
         >
             <FontAwesomeIcon icon={contact.icon} className="text-4xl mb-4 text-indigo-500" />
-            <p className="text-lg font-medium text-center mb-2">{contact.text}</p>
-            <p className="text-sm text-center">{contact.info}</p>
+            <p className="text-lg font-medium">{contact.text}</p>
+            <p className="text-sm">{contact.info}</p>
         </motion.div>
     );
 
@@ -398,7 +407,11 @@ const SocialMediaContact = () => {
             whileTap={{ scale: 0.95 }}
             variants={itemVariants}
         >
-            <FontAwesomeIcon icon={social.icon} className="text-4xl mb-4 text-indigo-500" />
+            {social.icon === 'xiaohongshu' ? (
+                <XiaohongshuIcon />
+            ) : (
+                <FontAwesomeIcon icon={social.icon} className="text-4xl mb-4 text-indigo-500" />
+            )}
             <p className="text-lg font-medium text-center">{social.text}</p>
             <p className="text-sm text-center">{social.info}</p>
         </motion.a>
@@ -412,36 +425,29 @@ const SocialMediaContact = () => {
             animate={inView ? "visible" : "hidden"}
             variants={containerVariants}
         >
-            <div className="container mx-auto px-5">
-                <motion.div
-                    className="flex justify-center mb-12"
-                    variants={itemVariants}
-                >
-                    <img src="assets/logo.webp" alt="Company Logo" className="h-24 w-auto" />
-                </motion.div>
-
-                <motion.h2
-                    className="text-4xl font-bold mb-12 text-center"
-                    variants={itemVariants}
-                >
-                    Connect Us
-                </motion.h2>
+            <div className="container px-5 mx-auto">
+                <div className="text-center mb-20">
+                    <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4">Contact Us</h1>
+                    <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+                        Get in touch with us through various channels. We're always here to help!
+                    </p>
+                </div>
 
                 {/* Contact Info Row */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+                    className="flex flex-wrap -m-4 mb-12"
                     variants={containerVariants}
                 >
                     {contactInfo.map((contact, index) => (
-                        <motion.div key={index} variants={itemVariants}>
-                            {renderContactBox(contact, index)}
+                        <motion.div key={index} className="p-4 md:w-1/3 w-full" variants={itemVariants}>
+                            {renderContactInfo(contact, index)}
                         </motion.div>
                     ))}
                 </motion.div>
 
                 {/* Social Links Row */}
                 <motion.div
-                    className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                    className="grid grid-cols-2 md:grid-cols-5 gap-6"
                     variants={containerVariants}
                 >
                     {socialLinks.map((social, index) => (
@@ -454,5 +460,6 @@ const SocialMediaContact = () => {
         </motion.section>
     );
 };
+
 
 export default Landing;
