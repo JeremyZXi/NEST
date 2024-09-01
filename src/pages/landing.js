@@ -19,7 +19,7 @@ import {
     faInstagram,
     faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
-
+import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -354,6 +354,7 @@ const SocialMediaContact = () => {
         { icon: faTwitter, text: 'Twitter', link: 'https://twitter.com/yourhandle', info: 'username' },
         { icon: faInstagram, text: 'Instagram', link: 'https://instagram.com/yourprofile', info: 'username' },
         { icon: faLinkedin, text: 'LinkedIn', link: 'https://linkedin.com/in/yourprofile', info: 'username' },
+        { icon: faBookOpen, text: '小红书', link: 'https://linkedin.com/in/yourprofile', info: 'username' }
     ];
 
     const containerVariants = {

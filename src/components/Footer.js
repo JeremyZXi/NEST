@@ -1,14 +1,16 @@
 import React from 'react';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Footer = () => {
     const socialLinks = [
-        { name: 'GitHub', url: 'https://github.com/JeremyZXi', icon: 'assests/github-mark-white.svg' },
+        { name: '小红书', url: 'https://github.com/JeremyZXi', icon: "assets/Xiaohongshu.svg" },
     ];
 
     const quickLinks = [
-        { name: 'About', url: '/about' },
-        { name: 'Documentation', url: 'https://keycas-doc.github.io/' },
-        { name: 'FAQ', url: '/faq' },
-        { name: 'Support', url: 'https://keycas-doc.github.io/' },
+        { name: 'About Us', url: '/about' },
+
+        { name: 'Feedback', url: '/feedback' },
+
     ];
 
     const relatedProjects = [
@@ -23,6 +25,14 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">NEST</h3>
                         <p className="text-sm">Version 1.0.0beta</p>
+                        <div className="flex items-center space-x-2">
+                            <a href="https://keycas.cn" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+                                <p className="text-sm">Powered by KeyCAS</p>
+                                <img src="assets/KeyCAS.svg" alt="KeyCAS Logo" className="h-4 w-auto"/>
+                            </a>
+                        </div>
+
+
                         <div className="flex mt-4 space-x-4">
                             {socialLinks.map((link) => (
                                 <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
