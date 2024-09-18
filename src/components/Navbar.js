@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { X, Menu, ChevronDown } from 'lucide-react';
 
+import navLinks from "../data/navLinks";
 const Navbar = () => {
     const [scrollY, setScrollY] = useState(0);
     const [navbarBackground, setNavbarBackground] = useState('transparent');
@@ -12,19 +13,7 @@ const Navbar = () => {
     const [isConnectOpen, setIsConnectOpen] = useState(false);
     const connectRef = useRef(null);
 
-    const navLinks = [
-        { to: '/', label: 'Home' },
-        { to: '/about', label: 'About Us' },
-        { to: '/feedback', label: 'Feedback' },
-        {
-            label: 'Connect',
-            subItems: [
-                { to: '/cat1', label: 'Placeholder1' },
-                { to: '/cat2', label: 'Placeholder2' },
 
-            ],
-        },
-    ];
 
     const handleScroll = () => {
         const currentScrollY = window.scrollY;
