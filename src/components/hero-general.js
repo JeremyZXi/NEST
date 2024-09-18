@@ -1,4 +1,3 @@
-// Hero.js
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -76,6 +75,7 @@ const HeroGeneral = ({ title, subtitle }) => {
             transition: { duration: 1.5, ease: "easeOut" }
         }
     };
+
     const AnimatedText = ({ text, variants }) => (
         <>
             {text.split(' ').map((word, wordIndex) => (
@@ -110,7 +110,7 @@ const HeroGeneral = ({ title, subtitle }) => {
             </motion.div>
 
             {/* Main content */}
-            <div className="text-center text-white z-20 relative">
+            <div className="text-center text-white z-20 relative w-full">
                 <motion.h1
                     className="text-9xl font-bold mb-4"
                     variants={titleVariants}
@@ -118,20 +118,23 @@ const HeroGeneral = ({ title, subtitle }) => {
                     <AnimatedText text={title} variants={letterVariants} />
                 </motion.h1>
 
-                <AnimatePresence>
-                    {showSubtitle && (
-                        <motion.div
-                            variants={subtitleVariants}
-                            initial="hidden"
-                            animate="visible"
-                            exit={{ opacity: 0, y: -10, transition: { duration: 0.3 } }}
-                        >
-                            <h2 className="text-3xl font-bold mb-4">
-                                <AnimatedText text={subtitle} variants={letterVariants} />
-                            </h2>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
+                <div className="w-full flex justify-center">
+                    <AnimatePresence>
+                        {showSubtitle && (
+                            <motion.div
+                                className="w-1/2"
+                                variants={subtitleVariants}
+                                initial="hidden"
+                                animate="visible"
+                                exit={{ opacity: 0, y: -10, transition: { duration: 0.3 } }}
+                            >
+                                <h2 className="text-3xl font-bold">
+                                    <AnimatedText text={subtitle} variants={letterVariants} />
+                                </h2>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
             </div>
         </motion.section>
     );

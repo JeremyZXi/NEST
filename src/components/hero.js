@@ -51,16 +51,6 @@ const Hero = () => {
                         </motion.div>
                     )}
                 </AnimatePresence>
-
-                <motion.a
-                    href="#"
-                    className="inline-block px-6 py-3 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 2 }}
-                >
-                    Learn More
-                </motion.a>
             </div>
         </section>
     );
