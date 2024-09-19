@@ -7,7 +7,7 @@ const DataDisplay = () => {
     const controls = useAnimation();
 
     useEffect(() => {
-        const launchDate = new Date(2023, 0, 1);
+        const launchDate = new Date(2024, 6, 18);
         const currentDate = new Date();
         const totalMonths = (currentDate.getFullYear() - launchDate.getFullYear()) * 12 +
             (currentDate.getMonth() - launchDate.getMonth());
@@ -17,8 +17,8 @@ const DataDisplay = () => {
 
     const data = [
         { label: 'Months Since Launch', value: monthsSinceLaunch, icon: ArrowUp },
-        { label: 'NEST Members', value: 2, icon: Users },
-        { label: 'NEST Partners', value: 2, icon: Building },
+        { label: 'NEST Members', value: 16, icon: Users },
+        { label: 'NEST Partners', value: 6, icon: Building },
     ];
 
     const containerVariants = {
