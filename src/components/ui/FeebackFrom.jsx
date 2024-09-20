@@ -1,36 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import emailjs from 'emailjs-com';
 
 // Initialize EmailJS with your user ID
-emailjs.init("FzfvItSTzWck2Mipl"); // Replace with your actual EmailJS user ID
+emailjs.init("FzfvItSTzWck2Mipl");
 
 function FeedbackForm() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [feedback, setFeedback] = useState('');
     const [isVisible, setIsVisible] = useState(false);
-    const [challenge, setChallenge] = useState({ num1: 0, num2: 0 });
-    const [answer, setAnswer] = useState('');
     const [showPopup, setShowPopup] = useState(false);
+    const [turnstileToken, setTurnstileToken] = useState(null);
+    const turnstileRef = useRef(null);
 
     useEffect(() => {
         const timer = setTimeout(() => setIsVisible(true), 100);
-        generateChallenge();
-        return () => clearTimeout(timer);
+
+        // Load Turnstile script
+        const script = document.createElement('script');
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+            clearTimeout(timer);
+            document.body.removeChild(script);
+        };
     }, []);
 
-    const generateChallenge = () => {
-        const num1 = Math.floor(Math.random() * 10);
-        const num2 = Math.floor(Math.random() * 10);
-        setChallenge({ num1, num2 });
-    };
+    useEffect(() => {
+        if (window.turnstile && turnstileRef.current) {
+            window.turnstile.render(turnstileRef.current, {
+                sitekey: '0x4AAAAAAAkVP6d12WMzfOMu', // Replace with your actual Turnstile site key
+                callback: function(token) {
+                    setTurnstileToken(token);
+                },
+            });
+        }
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (parseInt(answer) !== challenge.num1 + challenge.num2) {
-            alert('Incorrect answer to the challenge. Please try again.');
-            generateChallenge();
-            setAnswer('');
+        if (!turnstileToken) {
+            alert('Please complete the CAPTCHA');
             return;
         }
 
@@ -43,8 +55,8 @@ function FeedbackForm() {
             };
 
             const response = await emailjs.send(
-                'service_zmganv4', // Your EmailJS service ID
-                'template_rg2jspp', // Your EmailJS template ID
+                'service_zmganv4',
+                'template_rg2jspp',
                 templateParams
             );
 
@@ -53,8 +65,10 @@ function FeedbackForm() {
             setName('');
             setEmail('');
             setFeedback('');
-            setAnswer('');
-            generateChallenge();
+            setTurnstileToken(null);
+            if (window.turnstile) {
+                window.turnstile.reset();
+            }
             setTimeout(() => setShowPopup(false), 3000);
         } catch (error) {
             console.error('FAILED...', error);
@@ -76,7 +90,7 @@ function FeedbackForm() {
                 </h1>
                 <p className="text-white mb-6 text-lg text-center">
                     We value your input! Please share your thoughts with us.
-                </p >
+                </p>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="flex space-x-4">
                         <input
@@ -101,18 +115,8 @@ function FeedbackForm() {
                         className="w-full h-40 p-2 rounded-md text-black"
                         required
                     />
-                    <div className="flex items-center space-x-2">
-                        <span className="text-white font-semibold">CAPTCHA:</span>
-                        <label className="text-white">
-                            {challenge.num1} + {challenge.num2} =
-                        </label>
-                        <input
-                            type="text"
-                            value={answer}
-                            onChange={(e) => setAnswer(e.target.value)}
-                            className="w-16 p-2 rounded-md text-black"
-                            required
-                        />
+                    <div className="flex justify-center items-center">
+                        <div ref={turnstileRef}></div>
                     </div>
                     <div className="flex flex-col items-center">
                         <button
@@ -127,8 +131,8 @@ function FeedbackForm() {
             {showPopup && (
                 <div className="fixed inset-0 flex items-center justify-center z-50">
                     <div className="bg-[#4A249D] text-white p-4 rounded-lg shadow-lg">
-                        <p className="text-lg font-semibold">Thank you!</p >
-                        <p>Your feedback has been received.</p >
+                        <p className="text-lg font-semibold">Thank you!</p>
+                        <p>Your feedback has been received.</p>
                     </div>
                 </div>
             )}
