@@ -1,27 +1,29 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import navLinks from "../data/navLinks";
 import categoriesData from "../data/catData";
+
 const ItemCard = ({ item }) => (
     <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className="bg-gray-700 p-4 rounded-lg"
+        className="bg-black p-4 rounded-lg flex flex-col items-center"
     >
-        <div className="flex flex-col h-full">
-            <div className="mb-4">
-                <img src={item.logo} alt={item.name} className="w-full h-32 object-contain" />
-            </div>
-            <div className="flex-grow">
-                <h3 className="text-xl font-semibold text-white mb-2">{item.name}</h3>
-                <p className="text-gray-300 mb-2">{item.email}</p>
-                <p className="text-gray-400 mb-2">{item.description}</p>
-                {item.school && <p className="text-gray-400">School: {item.school}</p>}
-            </div>
+        <div className="mb-4 w-40 h-40 rounded-full bg-white flex items-center justify-center overflow-hidden">
+            <img src={item.logo} alt={item.name} className="w-full h-full object-cover" />
+        </div>
+        <div className="flex-grow w-full">
+            <h3 className="text-xl font-semibold text-white mb-2 text-center">{item.name}</h3>
+            <p className="text-gray-300 mb-2 text-center">{item.email}</p>
+            <div
+                className="text-gray-400 mb-2 text-left"
+                dangerouslySetInnerHTML={{ __html: item.description }}
+            />
+            {item.school && <p className="text-gray-400 text-left">School: {item.school}</p>}
         </div>
     </motion.div>
 );
@@ -49,7 +51,7 @@ const CategoryPage = () => {
         <div className="min-h-screen bg-black">
             <Navbar links={navLinks} />
             <main className="container mx-auto px-4 py-16">
-                <h1 className="text-4xl font-bold mb-12 text-center text-white">{category.name}</h1>
+                <h1 className="text-4xl font-bold mb-12 text-center text-white">NEST Partners</h1>
                 {category.subcategories.map((subcategory, index) => (
                     <SubcategorySection key={index} subcategory={subcategory} />
                 ))}

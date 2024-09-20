@@ -19,7 +19,7 @@ import {
     faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
 
-
+import FeedbackForm from "../components/ui/FeebackFrom";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -31,7 +31,7 @@ function Feedback() {
         <div className="min-h-screen bg-black">
             <Navbar />
             <HeroGeneral title="Feedback" subtitle="Your opinion counts" />
-
+            <FeedbackForm />
             <Footer />
         </div>
 
