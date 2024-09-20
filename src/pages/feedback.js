@@ -30,7 +30,6 @@ function Feedback() {
     return (
         <div className="min-h-screen bg-black">
             <Navbar />
-            <HeroGeneral title="Feedback" subtitle="Your opinion counts" />
             <FeedbackForm />
             <Footer />
         </div>
