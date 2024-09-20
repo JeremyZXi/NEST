@@ -59,64 +59,70 @@ const WhyNestComponent = () => {
     return (
         <motion.div
             ref={ref}
-            className="flex flex-col md:flex-row h-auto md:h-screen bg-black text-white p-8"
+            className="flex items-center min-h-screen bg-black text-white p-8"
             variants={containerVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
         >
-            <motion.div className="w-full md:w-1/4 pr-0 md:pr-4 mb-8 md:mb-0 flex flex-col justify-center" variants={childVariants}>
-                <motion.h1 className="text-4xl font-bold mb-4" variants={childVariants}>Why NEST</motion.h1>
-                <motion.h2 className="text-xl" variants={childVariants}>What you will gain from NEST</motion.h2>
-            </motion.div>
-            <motion.div className="w-full md:w-3/4 flex flex-col md:flex-row items-stretch" variants={childVariants}>
-                {tabs.map((tab, index) => (
-                    <motion.div
-                        key={index}
-                        className="w-full md:w-1/3 mx-2 mb-4 md:mb-0 rounded-lg overflow-hidden cursor-pointer"
-                        style={{ backgroundColor: tab.color }}
-                        whileHover={{ scale: 1.05 }}
-                        onMouseEnter={() => setHoveredTab(index)}
-                        onMouseLeave={() => setHoveredTab(null)}
-                        variants={childVariants}
-                    >
-                        <div className="p-6 h-full flex flex-col">
-                            <AnimatePresence mode="wait">
-                                {hoveredTab === index ? (
-                                    <motion.div
-                                        key="content"
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
-                                        transition={{ duration: 0.3 }}
-                                        className="h-full"
-                                    >
-                                        {tab.content.map((item, i) => (
-                                            <div key={i} className="flex items-start mb-6">
-                                                <div className="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4 flex-shrink-0">
-                                                    <span className="text-xl font-bold">{String(i + 1).padStart(2, '0')}</span>
+            <motion.div className="w-full flex flex-col md:flex-row items-center" variants={childVariants}>
+                <div className="w-full md:w-1/4 pr-0 md:pr-4 mb-8 md:mb-0">
+                    <motion.h1 className="text-7xl font-bold leading-none mb-6" variants={childVariants}>
+                        Why<br />NEST
+                    </motion.h1>
+                    <motion.h2 className="text-2xl leading-tight" variants={childVariants}>
+                        What you will<br />gain from NEST
+                    </motion.h2>
+                </div>
+                <div className="w-full md:w-3/4 flex flex-col md:flex-row items-stretch">
+                    {tabs.map((tab, index) => (
+                        <motion.div
+                            key={index}
+                            className="w-full md:w-1/3 mx-2 mb-4 md:mb-0 rounded-lg overflow-hidden cursor-pointer flex items-center justify-center"
+                            style={{ backgroundColor: tab.color, height: '500px' }}
+                            whileHover={{ scale: 1.05 }}
+                            onMouseEnter={() => setHoveredTab(index)}
+                            onMouseLeave={() => setHoveredTab(null)}
+                            variants={childVariants}
+                        >
+                            <div className="p-6 w-full h-full flex flex-col justify-center">
+                                <AnimatePresence mode="wait">
+                                    {hoveredTab === index ? (
+                                        <motion.div
+                                            key="content"
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className="h-full flex flex-col justify-center space-y-6"
+                                        >
+                                            {tab.content.map((item, i) => (
+                                                <div key={i} className="flex items-start">
+                                                    <div className="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4 flex-shrink-0">
+                                                        <span className="text-l font-bold">{String(i + 1).padStart(2, '0')}</span>
+                                                    </div>
+                                                    <p className="text-l">{item}</p>
                                                 </div>
-                                                <p className="text-lg">{item}</p>
+                                            ))}
+                                        </motion.div>
+                                    ) : (
+                                        <motion.div
+                                            key="title"
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className="h-full flex items-center justify-center"
+                                        >
+                                            <div className="w-44 h-44 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                                                <h1 className="text-2xl font-bold">{tab.title}</h1>
                                             </div>
-                                        ))}
-                                    </motion.div>
-                                ) : (
-                                    <motion.div
-                                        key="title"
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
-                                        transition={{ duration: 0.3 }}
-                                        className="h-full flex items-center justify-center"
-                                    >
-                                        <div className="w-32 h-32 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
-                                            <h1 className="text-2xl font-bold">{tab.title}</h1>
-                                        </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
-                    </motion.div>
-                ))}
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
             </motion.div>
         </motion.div>
     );

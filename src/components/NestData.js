@@ -80,7 +80,7 @@ const DataDisplay = () => {
                         >
                             <p className="text-sm mb-4 text-center text-gray-300">{item.label}</p>
                             <motion.div
-                                className="w-32 h-32 bg-purple-600 rounded-full flex items-center justify-center relative"
+                                className="w-32 h-32 bg-purple-800 rounded-full flex items-center justify-center relative"
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                                 variants={pulseVariants}
