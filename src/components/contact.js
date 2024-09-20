@@ -46,8 +46,8 @@ const SocialMediaContact = () => {
     ];
 
     const socialLinks = [
-        { icon: faInstagram, text: 'Instagram', link: 'https://instagram.com/yourprofile', info: 'username' },
-        { icon: 'xiaohongshu', text: 'Xiaohongshu', link: 'https://www.xiaohongshu.com/user/profile/5ccd5797000000001000aa34?channel_type=web_note_detail_r10&wechatWid=a966bdd7249f9668a84b8e33d5f21719&wechatOrigin=menu', info: 'username' }
+        { icon: faInstagram, text: 'Instagram', link: 'https://instagram.com/yourprofile', info: 'NEST' },
+        { icon: 'xiaohongshu', text: 'Xiaohongshu', link: 'https://www.xiaohongshu.com/user/profile/5ccd5797000000001000aa34?channel_type=web_note_detail_r10&wechatWid=a966bdd7249f9668a84b8e33d5f21719&wechatOrigin=menu', info: 'NEST' }
     ];
 
     const renderContactInfo = (contact, index) => (

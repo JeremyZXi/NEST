@@ -47,7 +47,7 @@ export const categoriesData = [
                 name: 'NEST Members',
                 items: [
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'https://www.keystoneacademy.cn/Public/Uploads/uploadfile/images/20220831/logo21-279.svg',
                         name: 'Keystone Academy 北京鼎石学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
@@ -61,98 +61,98 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C3.jpg',
                         name: 'Beijing Haidian Kaiwen Academy 北京海淀凯文学校',
                         email: 'Student.Council@hd.kaiwenacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C4.jpg',
                         name: 'RCF Experimental School A- Level Center 人大附中朝阳分校国际部',
                         email: 'zhangjunru@rdfzcygj.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C5.jpg',
                         name: 'Beijing World Youth Academy 北京世青学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C6.jpg',
                         name: 'The Experimental High School Attached to Beijing Normal University 北师大附属实验中学国际',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C7.jpg',
                         name: 'Montverde Academy Shanghai Beijing National Day School 上海梦沃未来学院',
                         email: 'gloria_wu2007@163.com',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C8.jpg',
                         name: 'Beijing National Day School 北京十一学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C9.jpg',
                         name: 'Beijing City International School 北京乐成学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C10.jpg',
                         name: 'Beijing Royal School 北京王府学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C11.jpg',
                         name: 'Aidi International School 北京爱迪国际学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C12.jpg',
                         name: 'Dulwich College Beijing 北京德威英国国际学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C13.jpg',
                         name: '北京中学国际部',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C14.jpg',
                         name: '八十中国际部',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C15.jpg',
                         name: 'Xi\'an Foreign Language School 西安外国语国际部',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C16.jpg',
                         name: 'NLCSS',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
