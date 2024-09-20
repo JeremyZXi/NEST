@@ -43,9 +43,9 @@ const Section2 = () => {
             whileInView="visible"
             transition={{ duration: 1 }}
         >
-            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center space-x-4">
                 <motion.div
-                    className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+                    className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:pr-4"
                     variants={leftVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -68,7 +68,7 @@ const Section2 = () => {
                     </Swiper>
                 </motion.div>
                 <motion.div
-                    className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+                    className="lg:flex-grow md:w-1/2 lg:pl-4 md:pl-8 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
                     variants={rightVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -111,4 +111,4 @@ const Section2 = () => {
     );
 };
 
-export default Section2
+export default Section2;

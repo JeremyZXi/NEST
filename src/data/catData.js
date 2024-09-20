@@ -10,7 +10,7 @@ export const categoriesData = [
                     {
                         logo: '/path-to-logo1.png',
                         name: '食尚 | Health and Wellness',
-                        email: 'partner1@example.com',
+                        email: 'partneremail@sth.com',
                         description: 'Empowering People for a Safe, Healthy, Sustainable Present and Future<br>' +
                             '赋能安全、健康、可持续的当下与未来<br>' +
                             'Health and Wellness is dedicated to promoting a natural, ecological, sustainable, and healthy lifestyle.\n' +
@@ -76,8 +76,8 @@ export const categoriesData = [
                     },
                     {
                         logo: '/path-to-logo2.png',
-                        name: 'RCF Experimental School A- Level Center 人大附中朝阳分校国际部',
-                        email: 'zhangjunru@rdfzcygj.cn',
+                        name: 'Beijing World Youth Academy 北京世青学校',
+                        email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
