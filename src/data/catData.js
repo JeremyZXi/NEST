@@ -8,7 +8,7 @@ export const categoriesData = [
                 name: 'NEST Partners',
                 items: [
                     {
-                        logo: '/path-to-logo1.png',
+                        logo: 'assets/partner/B3.jpg',
                         name: '食尚 | Health and Wellness',
                         email: 'partneremail@sth.com',
                         description: 'Empowering People for a Safe, Healthy, Sustainable Present and Future<br>' +
@@ -21,7 +21,7 @@ export const categoriesData = [
                             '帮助的群体，帮助他们提升自给自足能力，并通过慈善活动资助教育项目，推动社区的全面健康发展。'
                     },
                     {
-                        logo: '/path-to-logo1.png',
+                        logo: 'assets/partner/B2.jpg',
                         name: '斯坦福大学医学院亚裔肝脏中心 | ALC',
                         email: 'partner1@example.com',
                         description: 'The Asian Liver Center at Stanford University, established by Dr. Samuel So, a professor at Stanford University School of Medicine,\n' +
@@ -33,7 +33,7 @@ export const categoriesData = [
                             '并发起了全球的防治乙肝的翡翠丝带项目'
                     },
                     {
-                        logo: '/path-to-logo1.png',
+                        logo: 'assets/partner/B1.jpg',
                         name: 'FinTeen',
                         email: 'partner1@example.com',
                         description: 'At FinTeens, our mission is to teach and empower fellow high school students everywhere to develop a strong understanding of finance and start shaping their own financial futures. Our emphasis lies in creating engaging educational content that fosters discussions, encourages critical thinking, and nurtures a culture of financial responsibility.<br>'+
