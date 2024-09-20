@@ -268,7 +268,7 @@ organizations across high schools in China/the world." />
                 <MemberSchools />
                 <ExecutiveTeam />
                 <TeamsHead />
-                <History />
+                {/*<History />*/}
                 <SocialMediaContact />
                 <Footer />
             </div>
