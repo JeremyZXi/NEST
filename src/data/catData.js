@@ -54,7 +54,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: '/path-to-logo2.png',
+                        logo: 'assets/schoolLogo/C2.jpg',
                         name: 'Beijing Huijia Private School 北京汇佳私立学校',
                         email: '26huangyuxi@huijia.edu.cn',
                         description: '',
