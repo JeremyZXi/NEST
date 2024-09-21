@@ -89,28 +89,28 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C7.jpg',
-                        name: 'Montverde Academy Shanghai Beijing National Day School 上海梦沃未来学院',
+                        logo: 'assets/schoolLogo/C7.png',
+                        name: 'Montverde Academy Shanghai 上海梦沃未来学院',
                         email: 'gloria_wu2007@163.com',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C8.jpg',
+                        logo: 'https://www.bnds.cn/images/logo_fo.png',
                         name: 'Beijing National Day School 北京十一学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C9.jpg',
+                        logo: 'assets/schoolLogo/C8.jpg',
                         name: 'Beijing City International School 北京乐成学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C10.jpg',
+                        logo: 'https://www.brs.edu.cn/wp-content/uploads/2014/06/wangfu-logo-1.png',
                         name: 'Beijing Royal School 北京王府学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
@@ -124,7 +124,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C12.jpg',
+                        logo: 'https://assets.dulwich.org/schools/2022-dcb-cn-centred-aligned-20220129-160857-874.svg',
                         name: 'Dulwich College Beijing 北京德威英国国际学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',

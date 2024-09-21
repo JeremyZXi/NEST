@@ -13,8 +13,8 @@ const ItemCard = ({ item }) => (
         transition={{ duration: 0.3 }}
         className="bg-black p-4 rounded-lg flex flex-col items-center"
     >
-        <div className="mb-4 w-40 h-40 rounded-full bg-white flex items-center justify-center overflow-hidden">
-            <img src={item.logo} alt={item.name} className="w-full h-full object-cover" />
+        <div className="mb-4 w-40 h-40 flex bg-white rounded-full items-center justify-center overflow-hidden">
+            <img src={item.logo} alt={item.name} className="w-full h-full object-contain" />
         </div>
         <div className="flex-grow w-full">
             <h3 className="text-xl font-semibold text-white mb-2 text-center">{item.name}</h3>
