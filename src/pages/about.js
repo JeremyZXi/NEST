@@ -50,7 +50,7 @@ const MissionVision = () => {
                         >
                             <h2 className="text-4xl font-bold mb-4">Our Mission</h2>
                             <p className="text-xl leading-relaxed">
-                                To become a leading network of high school service leadership in China/the world.
+                                To connect all student service leaders and foster easy collaboration and resource exchange.
                             </p>
                         </motion.div>
                         <motion.div
@@ -60,7 +60,7 @@ const MissionVision = () => {
                         >
                             <h2 className="text-4xl font-bold mb-4">Our Vision</h2>
                             <p className="text-xl leading-relaxed">
-                                To connect all student service leaders and foster easy collaboration and resource exchange.
+                                To become a leading network of high school service leadership in China/the world.
                             </p>
                         </motion.div>
                     </div>
