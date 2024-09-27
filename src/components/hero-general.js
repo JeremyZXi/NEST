@@ -128,7 +128,7 @@ const HeroGeneral = ({ title, subtitle }) => {
                                 animate="visible"
                                 exit={{ opacity: 0, y: -10, transition: { duration: 0.3 } }}
                             >
-                                <h2 className="text-3xl font-bold">
+                                <h2 className="text-3xl">
                                     <AnimatedText text={subtitle} variants={letterVariants} />
                                 </h2>
                             </motion.div>

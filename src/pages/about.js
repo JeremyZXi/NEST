@@ -262,8 +262,7 @@ function About() {
             <div className="min-h-screen bg-black text-white">
                 <ScollTop />
                 <Navbar />
-                <HeroGeneral title="NEST" subtitle="is a network of service activists, leaders, and
-organizations across high schools in China/the world." />
+                <HeroGeneral title="NEST" subtitle="is a network of service activists, leaders, and organizations across high schools in China/the world." />
                 <MissionVision />
                 <MemberSchools />
                 <ExecutiveTeam />
