@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 
 // Initialize EmailJS with your user ID
@@ -10,38 +10,20 @@ function FeedbackForm() {
     const [feedback, setFeedback] = useState('');
     const [isVisible, setIsVisible] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
-    const [turnstileToken, setTurnstileToken] = useState(null);
-    const turnstileRef = useRef(null);
+    const [hCaptchaToken, setHCaptchaToken] = useState(null);
 
     useEffect(() => {
         const timer = setTimeout(() => setIsVisible(true), 100);
-
-        // Load Turnstile script
-        const script = document.createElement('script');
-        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
-        script.async = true;
-        document.body.appendChild(script);
-
-        return () => {
-            clearTimeout(timer);
-            document.body.removeChild(script);
-        };
+        return () => clearTimeout(timer);
     }, []);
 
-    useEffect(() => {
-        if (window.turnstile && turnstileRef.current) {
-            window.turnstile.render(turnstileRef.current, {
-                sitekey: '0x4AAAAAAAkVP6d12WMzfOMu', // Replace with your actual Turnstile site key
-                callback: function(token) {
-                    setTurnstileToken(token);
-                },
-            });
-        }
-    }, []);
+    const onHCaptchaChange = (token) => {
+        setHCaptchaToken(token);
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!turnstileToken) {
+        if (!hCaptchaToken) {
             alert('Please complete the CAPTCHA');
             return;
         }
@@ -50,7 +32,7 @@ function FeedbackForm() {
             const templateParams = {
                 from_name: name || 'Anonymous',
                 from_email: email || 'Not provided',
-                to_email: 'keycas.executives@outlook.com',
+                to_email: 'keycas.executives@outlook.com', // Updated recipient email
                 message: feedback
             };
 
@@ -65,10 +47,10 @@ function FeedbackForm() {
             setName('');
             setEmail('');
             setFeedback('');
-            setTurnstileToken(null);
-            if (window.turnstile) {
-                window.turnstile.reset();
+            if (window.hcaptcha) {
+                window.hcaptcha.reset();
             }
+            setHCaptchaToken(null);
             setTimeout(() => setShowPopup(false), 3000);
         } catch (error) {
             console.error('FAILED...', error);
@@ -115,8 +97,12 @@ function FeedbackForm() {
                         className="w-full h-40 p-2 rounded-md text-black"
                         required
                     />
-                    <div className="flex justify-center items-center">
-                        <div ref={turnstileRef}></div>
+                    <div className="flex justify-center">
+                        <div
+                            className="h-captcha"
+                            data-sitekey="e9a63f60-b256-49b6-85dc-1126769c4048"
+                            data-callback="onHCaptchaChange"
+                        ></div>
                     </div>
                     <div className="flex flex-col items-center">
                         <button
