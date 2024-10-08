@@ -76,7 +76,7 @@ const MissionVision = () => {
 
 const ExecutiveTeam = () => {
     const executives = [
-        { name: "Allen Wang", position: "Keystone Academy",graduate: "Class of 2025",image: "/assets/exec/Allan.jpg", description: "description test" },
+        { name: "Allan Wang", position: "Keystone Academy",graduate: "Class of 2025",image: "/assets/exec/Allan.jpg", description: "description test" },
         { name: "Yolanda Wang", position: "Keystone Academy",graduate: "Class of 2025",image: "/assets/exec/Yolanda W.jpg", description: "description" },
         { name: "Christine Chen", position: "Keystone Academy",graduate: "Class of 2026",image: "assets/exec/Christine.jpg", description: "description" },
         { name: "Eva Jiang", position: "Keystone Academy",graduate: "Class of 2025",image: "/assets/exec/Eva.jpg", description: "description" },
