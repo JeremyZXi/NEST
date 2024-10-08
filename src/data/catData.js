@@ -48,7 +48,7 @@ export const categoriesData = [
                 items: [
                     {
                         logo: 'assets/schoolLogo/ks.png',
-                        name: 'Keystone Academy 北京鼎石学校',
+                        name: 'Keystone Academy 北京市鼎石学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
@@ -76,7 +76,7 @@ export const categoriesData = [
                     },
                     {
                         logo: 'assets/schoolLogo/shiqing.jpg',
-                        name: 'Beijing World Youth Academy 北京世青学校',
+                        name: 'Beijing World Youth Academy 北京世青国际学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
@@ -104,7 +104,7 @@ export const categoriesData = [
                     },
                     {
                         logo: 'assets/schoolLogo/C8.jpg',
-                        name: 'Beijing City International School 北京乐成学校',
+                        name: 'Beijing City International School 北京乐成国际学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
