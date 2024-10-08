@@ -106,7 +106,6 @@ const ExecutiveTeam = () => {
                                 <p className="text-indigo-400 mb-0">{exec.position}</p>
                                 <p className="text-indigo-400 mb-4">{exec.graduate}</p>
                             </div>
-                            <p className="text-gray-300 mt-4">{exec.description}</p>
                         </motion.div>
                     ))}
                 </div>
