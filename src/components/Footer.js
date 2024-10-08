@@ -3,7 +3,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Footer = () => {
     const socialLinks = [
-        { name: '小红书', url: 'https://github.com/JeremyZXi', icon: "assets/Xiaohongshu.svg" },
+        { name: '小红书', url: 'https://www.xiaohongshu.com/user/profile/5ccd5797000000001000aa34?channel_type=web_note_detail_r10&wechatWid=a966bdd7249f9668a84b8e33d5f21719&wechatOrigin=menu', icon: "assets/Xiaohongshu.svg" },
     ];
 
     const quickLinks = [
