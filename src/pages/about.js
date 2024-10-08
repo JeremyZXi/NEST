@@ -8,7 +8,7 @@ import SocialMediaContact from "../components/contact";
 import timelineEvents from "../data/timelineEvents";
 import ScollTop from "../components/ScollTop";
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
-
+//test merge
 
 
 
