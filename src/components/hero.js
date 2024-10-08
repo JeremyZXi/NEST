@@ -6,7 +6,7 @@ const Hero = () => {
     const [showFullName, setShowFullName] = useState(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => setShowFullName(true), 2000);
+        const timer = setTimeout(() => setShowFullName(true), 500);
         return () => clearTimeout(timer);
     }, []);
 

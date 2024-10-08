@@ -81,9 +81,7 @@ const Section2 = () => {
                         whileInView="visible"
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
-                        Before they sold out
-                        <br className="hidden lg:inline-block" />
-                        readymade gluten
+                        Past Events
                     </motion.h1>
                     <motion.p
                         className="mb-8 leading-relaxed"

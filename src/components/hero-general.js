@@ -5,7 +5,7 @@ const HeroGeneral = ({ title, subtitle }) => {
     const [showSubtitle, setShowSubtitle] = useState(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => setShowSubtitle(true), 1200);
+        const timer = setTimeout(() => setShowSubtitle(true), 500);
         return () => clearTimeout(timer);
     }, []);
 
