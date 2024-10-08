@@ -11,6 +11,7 @@ function FeedbackForm() {
     const [isVisible, setIsVisible] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
     const [turnstileToken, setTurnstileToken] = useState(null);
+    const [isTurnstileLoaded, setIsTurnstileLoaded] = useState(false);
     const turnstileRef = useRef(null);
 
     useEffect(() => {
@@ -20,6 +21,7 @@ function FeedbackForm() {
         const script = document.createElement('script');
         script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
         script.async = true;
+        script.onload = () => setIsTurnstileLoaded(true);
         document.body.appendChild(script);
 
         return () => {
@@ -29,15 +31,19 @@ function FeedbackForm() {
     }, []);
 
     useEffect(() => {
-        if (window.turnstile && turnstileRef.current) {
+        if (isTurnstileLoaded && turnstileRef.current) {
             window.turnstile.render(turnstileRef.current, {
                 sitekey: '0x4AAAAAAAkVP6d12WMzfOMu', // Replace with your actual Turnstile site key
                 callback: function(token) {
                     setTurnstileToken(token);
                 },
+                'error-callback': function() {
+                    // Handle error, reset token
+                    setTurnstileToken(null);
+                }
             });
         }
-    }, []);
+    }, [isTurnstileLoaded]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -122,8 +128,9 @@ function FeedbackForm() {
                         <button
                             type="submit"
                             className="bg-[#4A249D] text-white px-6 py-2 rounded-full hover:bg-[#3D1E80] transition duration-300 border border-white"
+                            disabled={!turnstileToken}
                         >
-                            Send
+                            {turnstileToken ? 'Send' : 'Verifying...'}
                         </button>
                     </div>
                 </form>
