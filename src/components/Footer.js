@@ -3,7 +3,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Footer = () => {
     const socialLinks = [
-        { name: '小红书', url: 'https://github.com/JeremyZXi', icon: "assets/Xiaohongshu.svg" },
+        { name: '小红书', url: 'https://www.xiaohongshu.com/user/profile/5ccd5797000000001000aa34?channel_type=web_note_detail_r10&wechatWid=a966bdd7249f9668a84b8e33d5f21719&wechatOrigin=menu', icon: "assets/Xiaohongshu.svg" },
     ];
 
     const quickLinks = [
@@ -24,7 +24,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div>
                         <h3 className="text-lg font-semibold mb-4">NEST</h3>
-                        <p className="text-sm">Version 1.0.0beta</p>
+                        <p className="text-sm">Version 1.0.3</p>
                         <div className="flex items-center space-x-2">
                             <a href="https://keycas.cn" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
                                 <p className="text-sm">Powered by KeyCAS</p>
@@ -52,7 +52,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Related Projects</h3>
+                        <h3 className="text-lg font-semibold mb-4">Relevant links</h3>
                         <ul className="space-y-2">
                             {relatedProjects.map((project) => (
                                 <li key={project.name}>
@@ -65,7 +65,7 @@ const Footer = () => {
                     <div className="flex flex-col justify-between">
                         <div>
                             <h3 className="text-lg font-semibold mb-4">Support Us</h3>
-                            <a href="https://keycas-doc.github.io/docs/development" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                            <a href="/" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
                                 Contribute
                             </a>
 
