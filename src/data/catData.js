@@ -5,10 +5,10 @@ export const categoriesData = [
         subcategories: [
             {
                 id: 'partners',
-                name: 'NEST Partners',
+                name: '',
                 items: [
                     {
-                        logo: 'assets/partner/B3.jpg',
+                        logo: 'assets/partner/B3.png',
                         name: '食尚 | Health and Wellness',
                         email: 'partneremail@sth.com',
                         description: 'Empowering People for a Safe, Healthy, Sustainable Present and Future<br>' +
@@ -21,7 +21,7 @@ export const categoriesData = [
                             '帮助的群体，帮助他们提升自给自足能力，并通过慈善活动资助教育项目，推动社区的全面健康发展。'
                     },
                     {
-                        logo: 'assets/partner/B2.jpg',
+                        logo: 'assets/partner/B2.png',
                         name: '斯坦福大学医学院亚裔肝脏中心 | ALC',
                         email: 'partner1@example.com',
                         description: 'The Asian Liver Center at Stanford University, established by Dr. Samuel So, a professor at Stanford University School of Medicine,\n' +
@@ -33,7 +33,7 @@ export const categoriesData = [
                             '并发起了全球的防治乙肝的翡翠丝带项目'
                     },
                     {
-                        logo: 'assets/partner/B1.jpg',
+                        logo: 'assets/partner/B1.png',
                         name: 'FinTeen',
                         email: 'partner1@example.com',
                         description: 'At FinTeens, our mission is to teach and empower fellow high school students everywhere to develop a strong understanding of finance and start shaping their own financial futures. Our emphasis lies in creating engaging educational content that fosters discussions, encourages critical thinking, and nurtures a culture of financial responsibility.<br>'+
@@ -47,7 +47,7 @@ export const categoriesData = [
                 name: 'NEST Members',
                 items: [
                     {
-                        logo: 'https://www.keystoneacademy.cn/Public/Uploads/uploadfile/images/20220831/logo21-279.svg',
+                        logo: 'assets/schoolLogo/ks.png',
                         name: 'Keystone Academy 北京鼎石学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
@@ -61,7 +61,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C3.jpg',
+                        logo: 'assets/schoolLogo/C3.png',
                         name: 'Beijing Haidian Kaiwen Academy 北京海淀凯文学校',
                         email: 'Student.Council@hd.kaiwenacademy.cn',
                         description: '',
@@ -75,14 +75,14 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C5.jpg',
+                        logo: 'assets/schoolLogo/shiqing.jpg',
                         name: 'Beijing World Youth Academy 北京世青学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C6.jpg',
+                        logo: 'assets/schoolLogo/beishida.png',
                         name: 'The Experimental High School Attached to Beijing Normal University 北师大附属实验中学国际',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
@@ -110,7 +110,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'https://www.brs.edu.cn/wp-content/uploads/2014/06/wangfu-logo-1.png',
+                        logo: 'assets/schoolLogo/wangfu.png',
                         name: 'Beijing Royal School 北京王府学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
@@ -124,7 +124,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'https://assets.dulwich.org/schools/2022-dcb-cn-centred-aligned-20220129-160857-874.svg',
+                        logo: 'assets/schoolLogo/dulwich.png',
                         name: 'Dulwich College Beijing 北京德威英国国际学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
@@ -138,7 +138,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C14.jpg',
+                        logo: 'assets/schoolLogo/bashi.png',
                         name: '八十中国际部',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
