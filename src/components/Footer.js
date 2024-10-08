@@ -14,9 +14,7 @@ const Footer = () => {
     ];
 
     const relatedProjects = [
-        { name: 'GrapesJS', url: 'https://grapesjs.com/' },
-        { name: 'Silex', url: '/project-b' },
-        { name: 'Gitlab', url: 'https://gitlab.com/gitlab-org/gitlab'}
+        { name: 'FinTeens', url: 'https://fin-teens.com/' },
     ];
     return (
         <footer className="bg-black text-white py-8 mt-8">
