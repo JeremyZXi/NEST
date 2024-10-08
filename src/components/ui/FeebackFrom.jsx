@@ -56,7 +56,7 @@ function FeedbackForm() {
             const templateParams = {
                 from_name: name || 'Anonymous',
                 from_email: email || 'Not provided',
-                to_email: 'keycas.executives@outlook.com',
+                to_email: 'nest.executives@outlook.com',
                 message: feedback
             };
 
@@ -130,7 +130,7 @@ function FeedbackForm() {
                             className="bg-[#4A249D] text-white px-6 py-2 rounded-full hover:bg-[#3D1E80] transition duration-300 border border-white"
                             disabled={!turnstileToken}
                         >
-                            {turnstileToken ? 'Send' : 'Verifying...'}
+                            {turnstileToken ? 'Send' : 'Verifying...Please complete the CAPTCHA'}
                         </button>
                     </div>
                 </form>
