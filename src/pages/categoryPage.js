@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -43,8 +43,9 @@ const CategoryPage = () => {
     const { categoryId } = useParams();
     const category = categoriesData.find(cat => cat.id === categoryId);
 
+    // If category does not exist, redirect to NotFound
     if (!category) {
-        return <div>Category not found</div>;
+        return <Navigate to="/not-found" />; // Adjust to match your NotFound route
     }
 
     return (
