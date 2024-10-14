@@ -7,7 +7,6 @@ import {Autoplay, Navigation, Pagination} from "swiper/modules";
 const importAll = (r) => r.keys().map(r);
 
 const section1Images = importAll(require.context('../../public/assets/current', false, /\.(png|jpe?g|svg)$/));
-const section2Images = importAll(require.context('../../public/assets/past', false, /\.(png|jpe?g|svg)$/));
 
 const Section1 = () => {
     const controls = useAnimation();

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef } from 'react';
 import { motion, useAnimation,AnimatePresence } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 import Navbar from "../components/Navbar";
 import Hero from "../components/hero";
@@ -16,6 +17,74 @@ import Section1 from "../components/Section1";
 import Section2 from "../components/Section2";
 import WhyNestComponent from "../components/WhyNest";
 import DataDisplay from "../components/NestData";
+
+import categoriesData from "../data/catData";
+
+
+
+const LogoCarousel = ({ logos }) => {
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+        threshold: 0.1,
+    });
+
+    const [duplicatedLogos, setDuplicatedLogos] = useState([]);
+
+    useEffect(() => {
+        // 复制logo数组以确保无缝循环
+        setDuplicatedLogos([...logos, ...logos]);
+    }, [logos]);
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { duration: 1 }
+        }
+    };
+
+    const carouselVariants = {
+        animate: {
+            x: [0, -50 + '%'],
+            transition: {
+                x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 20, // 调整持续时间以控制速度
+                    ease: "linear"
+                }
+            }
+        }
+    };
+
+    return (
+        <motion.div
+            ref={ref}
+            className="bg-black py-12 overflow-hidden"
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+        >
+            <div className="container mx-auto px-4">
+                <motion.div
+                    className="flex"
+                    variants={carouselVariants}
+                    animate="animate"
+                >
+                    {duplicatedLogos.map((logo, index) => (
+                        <div key={index} className="flex-shrink-0">
+                            <img
+                                src={logo}
+                                alt={`Partner logo ${index + 1}`}
+                                className="h-32 w-auto object-contain mx-8"
+                            />
+                        </div>
+                    ))}
+                </motion.div>
+            </div>
+        </motion.div>
+    );
+};
 const SectionTest = () => {
     const [ref, inView] = useInView({
         triggerOnce: false,
@@ -104,11 +173,15 @@ const SectionTest = () => {
 
 
 const Landing = () => {
+    const partnerLogos = categoriesData[0].subcategories[0].items.map(item => item.logo);
+    const memberLogos = categoriesData[0].subcategories[1].items.map(item => item.logo);
+    const allLogos = [...partnerLogos, ...memberLogos];
     return (
         <div className="min-h-screen bg-black">
             <Navbar />
             <Hero />
             <SectionTest />
+            <LogoCarousel logos={allLogos} />
             <WhyNestComponent />
             <Section1 />
             <Section2 />
