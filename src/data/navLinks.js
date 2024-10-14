@@ -5,7 +5,7 @@ export const navLinks = [
     { to: '/about', label: 'About Us' },
     { to: '/feedback', label: 'Feedback' },
     {
-        label: 'Connect',
+        label: 'Members & Partners',
         subItems: categoriesData.map(category => ({
             to: `/${category.id}`,
             label: category.name,
