@@ -41,8 +41,7 @@ const SocialMediaContact = () => {
     };
 
     const contactInfo = [
-        { icon: faEnvelope, text: 'Email', info: 'nest.executives@outlook.com' },
-        { icon: faPhone, text: 'Phone', info: '+1 (123) 456-7890' },
+        { icon: faEnvelope, text: 'Email', info: 'nest.executives@outlook.com' }
     ];
 
     const socialLinks = [
@@ -103,7 +102,7 @@ const SocialMediaContact = () => {
 
                 {/* Contact Info Row */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+                    className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-12"
                     variants={containerVariants}
                 >
                     {contactInfo.map((contact, index) => renderContactInfo(contact, index))}
