@@ -110,14 +110,14 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C11.jpg',
+                        logo: 'assets/schoolLogo/C11.png',
                         name: 'Aidi International School 北京爱迪国际学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: 'https://www.bnds.cn/images/logo_fo.png',
+                        logo: 'assets/schoolLogo/shiyi.png',
                         name: 'Beijing National Day School 北京十一学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
