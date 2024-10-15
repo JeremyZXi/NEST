@@ -67,14 +67,14 @@ const Section1 = () => {
                         className="mb-8 leading-relaxed"
                         variants={textVariants}
                     >
-                        Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.
+                        Check out our current events!
                     </motion.p>
                     <motion.div
                         className="flex justify-center"
                         variants={buttonVariants}
                     >
                         <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                            Button
+                            Explore
                         </button>
                     </motion.div>
                 </motion.div>
