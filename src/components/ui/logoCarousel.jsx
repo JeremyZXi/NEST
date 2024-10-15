@@ -24,13 +24,14 @@ export default function LogoCarousel({ logos }) {
 
     useEffect(() => {
         if (inView && containerWidth && contentWidth) {
+            const factor = 7; // Adjust this factor to make the carousel faster
             controls.start({
-                x: [0, -(contentWidth)],
+                x: [0, -(contentWidth * factor)],
                 transition: {
                     x: {
                         repeat: Infinity,
                         repeatType: "loop",
-                        duration: 20,
+                        duration: 100, // Keep the duration the same
                         ease: "linear"
                     }
                 }

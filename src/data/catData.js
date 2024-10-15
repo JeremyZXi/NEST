@@ -96,13 +96,6 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'https://www.bnds.cn/images/logo_fo.png',
-                        name: 'Beijing National Day School 北京十一学校',
-                        email: 'service.council@keystoneacademy.cn',
-                        description: '',
-                        school: ''
-                    },
-                    {
                         logo: 'assets/schoolLogo/C8.jpg',
                         name: 'Beijing City International School 北京乐成国际学校',
                         email: 'service.council@keystoneacademy.cn',
@@ -124,6 +117,13 @@ export const categoriesData = [
                         school: ''
                     },
                     {
+                        logo: 'https://www.bnds.cn/images/logo_fo.png',
+                        name: 'Beijing National Day School 北京十一学校',
+                        email: 'service.council@keystoneacademy.cn',
+                        description: '',
+                        school: ''
+                    },
+                    {
                         logo: 'assets/schoolLogo/dulwich.png',
                         name: 'Dulwich College Beijing 北京德威英国国际学校',
                         email: 'service.council@keystoneacademy.cn',
@@ -131,7 +131,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C13.jpg',
+                        logo: 'assets/schoolLogo/C13.png',
                         name: '北京中学国际部',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
@@ -145,7 +145,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C15.jpg',
+                        logo: 'assets/schoolLogo/C15.png',
                         name: 'Xi\'an Foreign Language School 西安外国语国际部',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
