@@ -54,7 +54,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C2.jpg',
+                        logo: 'assets/schoolLogo/C2.png',
                         name: 'Beijing Huijia Private School 北京汇佳私立学校',
                         email: '26huangyuxi@huijia.edu.cn',
                         description: '',
@@ -68,14 +68,14 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C4.jpg',
+                        logo: 'assets/schoolLogo/C4.png',
                         name: 'RCF Experimental School A- Level Center 人大附中朝阳分校国际部',
                         email: 'zhangjunru@rdfzcygj.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/shiqing.jpg',
+                        logo: 'assets/schoolLogo/shiqing.jpeg',
                         name: 'Beijing World Youth Academy 北京世青国际学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
