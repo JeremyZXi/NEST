@@ -24,14 +24,18 @@ export default function LogoCarousel({ logos }) {
 
     useEffect(() => {
         if (inView && containerWidth && contentWidth) {
-            const factor = 7; // Adjust this factor to make the carousel faster
+            // Calculate the total width for the animation
+            const totalWidth = contentWidth; // Use the actual content width for a single cycle
+            const speed = 100; // Pixels per second
+            const duration = totalWidth / speed; // Calculate duration based on speed
+
             controls.start({
-                x: [0, -(contentWidth * factor)],
+                x: [0, -totalWidth],
                 transition: {
                     x: {
                         repeat: Infinity,
                         repeatType: "loop",
-                        duration: 100, // Keep the duration the same
+                        duration: duration, // Dynamic duration
                         ease: "linear"
                     }
                 }
@@ -44,7 +48,7 @@ export default function LogoCarousel({ logos }) {
     return (
         <div
             ref={ref}
-            className="py-24 overflow-hidden bg-gradient-to-b from-transparent via-white/40 via-white/70 via-white/90 to-transparent"
+            className="py-24 overflow-hidden bg-gradient-to-b from-transparent via-white/40 to-transparent"
             aria-label="Partner logos carousel"
         >
             <div ref={containerRef} className="container mx-auto px-4 overflow-hidden">
@@ -52,10 +56,11 @@ export default function LogoCarousel({ logos }) {
                     ref={contentRef}
                     className="flex items-center"
                     animate={controls}
-                    style={{ x: containerWidth }}
+                    style={{ x: 0 }} // Start from zero
                 >
+                    {/* Duplicate logos for seamless effect */}
                     {logos.concat(logos).map((logo, index) => (
-                        <div key={index} className="flex-shrink-0 mx-8">
+                        <div key={index} className="flex-shrink-0 mx-4">
                             <img
                                 src={logo}
                                 alt={`Partner logo ${index % logos.length + 1}`}
