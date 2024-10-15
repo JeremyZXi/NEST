@@ -1,74 +1,66 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import PropTypes from 'prop-types';
+import React, { useEffect, useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
 
-export default function LogoCarousel({ logos }) {
-    const [ref, inView] = useInView({
-        triggerOnce: false,
-        threshold: 0.1,
-    });
-
-    const [containerWidth, setContainerWidth] = useState(0);
-    const [contentWidth, setContentWidth] = useState(0);
-    const containerRef = useRef(null);
-    const contentRef = useRef(null);
-    const controls = useAnimation();
+const LogoCarousel = ({ logos }) => {
+    const swiperRef = useRef(null);
 
     useEffect(() => {
-        if (containerRef.current && contentRef.current) {
-            setContainerWidth(containerRef.current.offsetWidth);
-            setContentWidth(contentRef.current.offsetWidth);
-        }
-    }, [logos]);
+        const interval = setInterval(() => {
+            if (swiperRef.current) {
+                swiperRef.current.swiper.slideNext();
+            }
+        }, 0.1); // Change slide every 0.1 seconds
 
-    useEffect(() => {
-        if (inView && containerWidth && contentWidth) {
-            const factor = 7; // Adjust this factor to make the carousel faster
-            controls.start({
-                x: [0, -(contentWidth * factor)],
-                transition: {
-                    x: {
-                        repeat: Infinity,
-                        repeatType: "loop",
-                        duration: 80, // Keep the duration the same
-                        ease: "linear"
-                    }
-                }
-            });
-        } else {
-            controls.stop();
-        }
-    }, [inView, containerWidth, contentWidth, controls]);
+        return () => clearInterval(interval); // Cleanup interval on unmount
+    }, []);
 
     return (
-        <div
-            ref={ref}
-            className="py-24 overflow-hidden bg-gradient-to-b from-transparent via-white/40 via-white/70 via-white/90 to-transparent"
-            aria-label="Partner logos carousel"
-        >
-            <div ref={containerRef} className="container mx-auto px-4 overflow-hidden">
-                <motion.div
-                    ref={contentRef}
-                    className="flex items-center"
-                    animate={controls}
-                    style={{ x: containerWidth }}
-                >
-                    {logos.concat(logos).map((logo, index) => (
-                        <div key={index} className="flex-shrink-0 mx-8">
-                            <img
-                                src={logo}
-                                alt={`Partner logo ${index % logos.length + 1}`}
-                                className="h-16 sm:h-24 md:h-32 w-auto object-contain"
-                            />
-                        </div>
-                    ))}
-                </motion.div>
-            </div>
+        <div className="relative py-8 overflow-hidden">
+            <div
+                className="absolute inset-0"
+                style={{
+                    background: 'linear-gradient(to bottom,transparent, #4A249D, #582FB0,#6F45C9,#8C6BD4,#B6ADFF,#E4DEFE,#E4DEFE,#B6ADFF,#8C6BD4,#6F45C9, #582FB0,#4A249D, transparent)',
+                }}
+            ></div>
+            <Swiper
+                loop={true}
+                ref={swiperRef}
+                className="flex justify-center" // Center the swiper container
+                speed={1600} // Transition speed in milliseconds
+                grabCursor={true} // Change cursor to a grab icon
+                breakpoints={{
+                    // Define breakpoints for responsive behavior
+                    640: {
+                        slidesPerView: 3,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                    },
+                    1280: {
+                        slidesPerView: 6,
+                    },
+                    1536: {
+                        slidesPerView: 7,
+                    },
+                }}
+            >
+                {logos.map((logo, index) => (
+                    <SwiperSlide key={index} className="flex justify-center items-center">
+                        <img
+                            src={logo}
+                            alt={`Logo ${index + 1}`}
+                            className="h-36 mx-auto object-contain" // Increased logo size
+                            style={{ display: 'block', margin: 'auto' }}
+                        />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </div>
     );
-}
-
-LogoCarousel.propTypes = {
-    logos: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
+
+export default LogoCarousel;
