@@ -37,7 +37,7 @@ export const categoriesData = [
                         name: 'FinTeen',
                         email: 'partner1@example.com',
                         description: 'At FinTeens, our mission is to teach and empower fellow high school students everywhere to develop a strong understanding of finance and start shaping their own financial futures. Our emphasis lies in creating engaging educational content that fosters discussions, encourages critical thinking, and nurtures a culture of financial responsibility.<br>'+
-                        'Finteens的目标是向帮助世界各地的高中 生深入了解金融知识、开启他们的金融之 路。Finteens的重心在于开发具有创新性 的教育材料，促进讨论，鼓励批判性思 维，并培养理财能力。'
+                            'Finteens的目标是向帮助世界各地的高中 生深入了解金融知识、开启他们的金融之 路。Finteens的重心在于开发具有创新性 的教育材料，促进讨论，鼓励批判性思 维，并培养理财能力。'
                     },
                     // More partners...
                 ]
@@ -110,14 +110,14 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C11.jpg',
+                        logo: 'assets/schoolLogo/C11.png',
                         name: 'Aidi International School 北京爱迪国际学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: 'https://www.bnds.cn/images/logo_fo.png',
+                        logo: 'assets/schoolLogo/shiyi.png',
                         name: 'Beijing National Day School 北京十一学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',

@@ -31,7 +31,7 @@ export default function LogoCarousel({ logos }) {
                     x: {
                         repeat: Infinity,
                         repeatType: "loop",
-                        duration: 100, // Keep the duration the same
+                        duration: 80, // Keep the duration the same
                         ease: "linear"
                     }
                 }
