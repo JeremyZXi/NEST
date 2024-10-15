@@ -37,7 +37,7 @@ export const categoriesData = [
                         name: 'FinTeen',
                         email: 'partner1@example.com',
                         description: 'At FinTeens, our mission is to teach and empower fellow high school students everywhere to develop a strong understanding of finance and start shaping their own financial futures. Our emphasis lies in creating engaging educational content that fosters discussions, encourages critical thinking, and nurtures a culture of financial responsibility.<br>'+
-                        'Finteens的目标是向帮助世界各地的高中 生深入了解金融知识、开启他们的金融之 路。Finteens的重心在于开发具有创新性 的教育材料，促进讨论，鼓励批判性思 维，并培养理财能力。'
+                            'Finteens的目标是向帮助世界各地的高中 生深入了解金融知识、开启他们的金融之 路。Finteens的重心在于开发具有创新性 的教育材料，促进讨论，鼓励批判性思 维，并培养理财能力。'
                     },
                     // More partners...
                 ]
@@ -54,7 +54,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C2.jpg',
+                        logo: 'assets/schoolLogo/C2.png',
                         name: 'Beijing Huijia Private School 北京汇佳私立学校',
                         email: '26huangyuxi@huijia.edu.cn',
                         description: '',
@@ -68,14 +68,14 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C4.jpg',
+                        logo: 'assets/schoolLogo/C4.png',
                         name: 'RCF Experimental School A- Level Center 人大附中朝阳分校国际部',
                         email: 'zhangjunru@rdfzcygj.cn',
                         description: '',
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/shiqing.jpg',
+                        logo: 'assets/schoolLogo/shiqing.jpeg',
                         name: 'Beijing World Youth Academy 北京世青国际学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
@@ -96,14 +96,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'https://www.bnds.cn/images/logo_fo.png',
-                        name: 'Beijing National Day School 北京十一学校',
-                        email: 'service.council@keystoneacademy.cn',
-                        description: '',
-                        school: ''
-                    },
-                    {
-                        logo: 'assets/schoolLogo/C8.jpg',
+                        logo: 'assets/schoolLogo/C8.png',
                         name: 'Beijing City International School 北京乐成国际学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
@@ -117,8 +110,15 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C11.jpg',
+                        logo: 'assets/schoolLogo/C11.png',
                         name: 'Aidi International School 北京爱迪国际学校',
+                        email: 'service.council@keystoneacademy.cn',
+                        description: '',
+                        school: ''
+                    },
+                    {
+                        logo: 'assets/schoolLogo/shiyi.png',
+                        name: 'Beijing National Day School 北京十一学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
                         school: ''
@@ -131,7 +131,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C13.jpg',
+                        logo: 'assets/schoolLogo/C13.png',
                         name: '北京中学国际部',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
@@ -145,7 +145,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C15.jpg',
+                        logo: 'assets/schoolLogo/C15.png',
                         name: 'Xi\'an Foreign Language School 西安外国语国际部',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',

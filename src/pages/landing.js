@@ -18,8 +18,8 @@ import DataDisplay from "../components/NestData";
 
 import categoriesData from "../data/catData";
 
-
-
+import LogoCarousel from "../components/ui/logoCarousel";
+/*
 const LogoCarousel = ({ logos }) => {
     const [ref, inView] = useInView({
         triggerOnce: false,
@@ -83,6 +83,9 @@ const LogoCarousel = ({ logos }) => {
         </motion.div>
     );
 };
+
+ */
+
 const SectionTest = () => {
     const [ref, inView] = useInView({
         triggerOnce: false,
