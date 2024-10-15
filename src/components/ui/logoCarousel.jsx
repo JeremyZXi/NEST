@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 
@@ -9,61 +9,62 @@ export default function LogoCarousel({ logos }) {
         threshold: 0.1,
     });
 
-    const [duplicatedLogos, setDuplicatedLogos] = useState([]);
+    const [containerWidth, setContainerWidth] = useState(0);
+    const [contentWidth, setContentWidth] = useState(0);
+    const containerRef = useRef(null);
+    const contentRef = useRef(null);
+    const controls = useAnimation();
 
     useEffect(() => {
-        // Duplicate the logo array to ensure seamless looping
-        setDuplicatedLogos([...logos, ...logos]);
+        if (containerRef.current && contentRef.current) {
+            setContainerWidth(containerRef.current.offsetWidth);
+            setContentWidth(contentRef.current.offsetWidth);
+        }
     }, [logos]);
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { duration: 1 }
-        }
-    };
-
-    const carouselVariants = {
-        animate: {
-            x: [0, -50 + '%'],
-            transition: {
-                x: {
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    duration: 20,
-                    ease: "linear"
+    useEffect(() => {
+        if (inView && containerWidth && contentWidth) {
+            controls.start({
+                x: [0, -(contentWidth)],
+                transition: {
+                    x: {
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        duration: 20,
+                        ease: "linear"
+                    }
                 }
-            }
+            });
+        } else {
+            controls.stop();
         }
-    };
+    }, [inView, containerWidth, contentWidth, controls]);
 
     return (
-        <motion.div
+        <div
             ref={ref}
-            className="py-12 overflow-hidden bg-gradient-to-b from-transparent via-white/60 to-transparent"
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            className="py-24 overflow-hidden bg-gradient-to-b from-transparent via-white/40 via-white/70 via-white/90 to-transparent"
+            aria-label="Partner logos carousel"
         >
-            <div className="container mx-auto px-4">
+            <div ref={containerRef} className="container mx-auto px-4 overflow-hidden">
                 <motion.div
-                    className="flex"
-                    variants={carouselVariants}
-                    animate="animate"
+                    ref={contentRef}
+                    className="flex items-center"
+                    animate={controls}
+                    style={{ x: containerWidth }}
                 >
-                    {duplicatedLogos.map((logo, index) => (
-                        <div key={index} className="flex-shrink-0">
+                    {logos.concat(logos).map((logo, index) => (
+                        <div key={index} className="flex-shrink-0 mx-8">
                             <img
                                 src={logo}
-                                alt={`Partner logo ${index + 1}`}
-                                className="h-32 w-auto object-contain mx-8"
+                                alt={`Partner logo ${index % logos.length + 1}`}
+                                className="h-16 sm:h-24 md:h-32 w-auto object-contain"
                             />
                         </div>
                     ))}
                 </motion.div>
             </div>
-        </motion.div>
+        </div>
     );
 }
 
