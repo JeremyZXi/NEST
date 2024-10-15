@@ -96,7 +96,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C8.jpg',
+                        logo: 'assets/schoolLogo/C8.png',
                         name: 'Beijing City International School 北京乐成国际学校',
                         email: 'service.council@keystoneacademy.cn',
                         description: '',
