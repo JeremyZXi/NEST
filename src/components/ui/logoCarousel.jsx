@@ -18,10 +18,7 @@ const LogoCarousel = ({ logos }) => {
     return (
         <div className="relative py-8 overflow-hidden">
             <div
-                className="absolute inset-0"
-                style={{
-                    background: 'linear-gradient(to bottom,transparent, #4A249D, #582FB0,#6F45C9,#8C6BD4,#B6ADFF,#E4DEFE,#E4DEFE,#B6ADFF,#8C6BD4,#6F45C9, #582FB0,#4A249D, transparent)',
-                }}
+                className="absolute inset-0 bg-[#d9cdf8]"
             ></div>
             <Swiper
                 loop={true}
