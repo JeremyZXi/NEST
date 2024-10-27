@@ -8,22 +8,10 @@ export const categoriesData = [
                 name: '',
                 items: [
                     {
-                        logo: 'assets/partner/B3.png',
-                        name: '食尚 | Health and Wellness',
-                        email: 'partneremail@sth.com',
-                        description: 'Empowering People for a Safe, Healthy, Sustainable Present and Future<br>' +
-                            '赋能安全、健康、可持续的当下与未来<br>' +
-                            'Health and Wellness is dedicated to promoting a natural, ecological, sustainable, and healthy lifestyle.\n' +
-                            'Through workshops and seminars, we support organic farmers and raise public awareness of healthy and mindful eating, fostering a stronger connection between farm and table.\n' +
-                            'We focus on empowering underserved communities to enhance self-sufficiency and fund educational initiatives through charitable activities, fostering overall community well-being, food safety, food security, and sustainability.<br>' +
-                            '食食尚致力于促进自然、生态、可持续和健康的生活方式。通过研讨会和实践工作\n' +
-                            '坊，支持生态种植践行者和农民并提高公众对健康饮食的意识。我们特别关注需要\n' +
-                            '帮助的群体，帮助他们提升自给自足能力，并通过慈善活动资助教育项目，推动社区的全面健康发展。'
-                    },
-                    {
                         logo: 'assets/partner/B2.png',
                         name: '斯坦福大学医学院亚裔肝脏中心 | ALC',
-                        email: 'partner1@example.com',
+                        email: 'https://med.stanford.edu/liver.html\n' +
+                            'jadeinchina@163.com',
                         description: 'The Asian Liver Center at Stanford University, established by Dr. Samuel So, a professor at Stanford University School of Medicine,\n' +
                             'is the first non-profit organization in the United States dedicated to the prevention and reatment of hepatitis B specifically for Asians and Asian Americans. Founded in 1996, the center aims to eliminate hepatitis B worldwide through health education and scientific research. It conducts various public welfare activities focused on hepatitis B prevention and has initiated the global Jade Ribbon Campaign to promote hepatitis B prevention and treatment.<br>' +
                             '斯坦福医学院苏启深教授所建立的美国斯坦福大学\n' +
@@ -35,9 +23,46 @@ export const categoriesData = [
                     {
                         logo: 'assets/partner/B1.png',
                         name: 'FinTeen',
-                        email: 'partner1@example.com',
+                        email: 'https://www.fin-teens.com/home',
                         description: 'At FinTeens, our mission is to teach and empower fellow high school students everywhere to develop a strong understanding of finance and start shaping their own financial futures. Our emphasis lies in creating engaging educational content that fosters discussions, encourages critical thinking, and nurtures a culture of financial responsibility.<br>'+
                             'Finteens的目标是向帮助世界各地的高中 生深入了解金融知识、开启他们的金融之 路。Finteens的重心在于开发具有创新性 的教育材料，促进讨论，鼓励批判性思 维，并培养理财能力。'
+                    },
+                    {
+                        logo: 'assets/partner/B3.png',
+                        name: '食尚 | Health and Wellness',
+                        email: 'info@healthandwellness.com.cn',
+                        description: 'Empowering People for a Safe, Healthy, Sustainable Present and Future<br>' +
+                            '赋能安全、健康、可持续的当下与未来<br>' +
+                            'Health and Wellness is dedicated to promoting a natural, ecological, sustainable, and healthy lifestyle.\n' +
+                            'Through workshops and seminars, we support organic farmers and raise public awareness of healthy and mindful eating, fostering a stronger connection between farm and table.\n' +
+                            'We focus on empowering underserved communities to enhance self-sufficiency and fund educational initiatives through charitable activities, fostering overall community well-being, food safety, food security, and sustainability.<br>' +
+                            '食食尚致力于促进自然、生态、可持续和健康的生活方式。通过研讨会和实践工作\n' +
+                            '坊，支持生态种植践行者和农民并提高公众对健康饮食的意识。我们特别关注需要\n' +
+                            '帮助的群体，帮助他们提升自给自足能力，并通过慈善活动资助教育项目，推动社区的全面健康发展。'
+                    },
+                    {
+                        logo: 'assets/partner/filmFestival.png',
+                        name: 'Film Festival by Joanna',
+                        email: 'filmiefilmks@gmail.com',
+                        description: ''
+                    },
+                    {
+                        logo: 'assets/partner/CTSA.png',
+                        name: 'CTSA Speeching & Social Activism',
+                        email: '',
+                        description: ''
+                    },
+                    {
+                        logo: 'assets/partner/Bingo.png',
+                        name: 'Bingo Translation Group',
+                        email: '',
+                        description: ''
+                    },
+                    {
+                        logo: 'assets/partner/Dispatio.png',
+                        name: 'Dispatio',
+                        email: '',
+                        description: ''
                     },
                     // More partners...
                 ]
@@ -77,14 +102,14 @@ export const categoriesData = [
                     {
                         logo: 'assets/schoolLogo/shiqing.jpeg',
                         name: 'Beijing World Youth Academy 北京世青国际学校',
-                        email: 'service.council@keystoneacademy.cn',
+                        email: 'Email pending',
                         description: '',
                         school: ''
                     },
                     {
                         logo: 'assets/schoolLogo/beishida.png',
                         name: 'The Experimental High School Attached to Beijing Normal University 北师大附属实验中学国际',
-                        email: 'service.council@keystoneacademy.cn',
+                        email: 'Email pending',
                         description: '',
                         school: ''
                     },
@@ -98,63 +123,93 @@ export const categoriesData = [
                     {
                         logo: 'assets/schoolLogo/C8.png',
                         name: 'Beijing City International School 北京乐成国际学校',
-                        email: 'service.council@keystoneacademy.cn',
+                        email: 'margaretyang11@hotmail.com',
+                        description: '',
+                        school: ''
+                    },
+                    {
+                        logo: 'assets/schoolLogo/BIBA.png',
+                        name: 'Beijing International Bilingual Academy 北京市海嘉学校',
+                        email: 'sissihuang0806@gmail.com',
                         description: '',
                         school: ''
                     },
                     {
                         logo: 'assets/schoolLogo/wangfu.png',
                         name: 'Beijing Royal School 北京王府学校',
-                        email: 'service.council@keystoneacademy.cn',
+                        email: 'elsabi20080126@gmail.com',
+                        description: '',
+                        school: ''
+                    },
+                    {
+                        logo: 'assets/schoolLogo/Daystar.png',
+                        name: 'Daystar Academy 启明星学校',
+                        email: '7442@daystaracademy.cn',
                         description: '',
                         school: ''
                     },
                     {
                         logo: 'assets/schoolLogo/C11.png',
                         name: 'Aidi International School 北京爱迪国际学校',
-                        email: 'service.council@keystoneacademy.cn',
+                        email: 'Email pending',
                         description: '',
                         school: ''
                     },
                     {
                         logo: 'assets/schoolLogo/shiyi.png',
                         name: 'Beijing National Day School 北京十一学校',
-                        email: 'service.council@keystoneacademy.cn',
+                        email: 'zhouruining1016@outlook.com',
                         description: '',
                         school: ''
                     },
                     {
                         logo: 'assets/schoolLogo/dulwich.png',
                         name: 'Dulwich College Beijing 北京德威英国国际学校',
-                        email: 'service.council@keystoneacademy.cn',
+                        email: 'alex.liu@stu.dulwich.org\n' +
+                            'Daniel.li25@stu.dulwich.org\n',
                         description: '',
                         school: ''
                     },
                     {
                         logo: 'assets/schoolLogo/C13.png',
                         name: '北京中学国际部',
-                        email: 'service.council@keystoneacademy.cn',
+                        email: 'maxchen0416@gmail.com',
                         description: '',
                         school: ''
                     },
                     {
                         logo: 'assets/schoolLogo/bashi.png',
                         name: '八十中国际部',
-                        email: 'service.council@keystoneacademy.cn',
+                        email: 'great_goldfish@sina.com',
+                        description: '',
+                        school: ''
+                    },
+                    {
+                        logo: 'assets/schoolLogo/pinghe.png',
+                        name: 'Shanghai Pinghe School 上海市民办平和学校',
+                        email: 'zhukexin@shphschool.com\n' +
+                            'baoshutong1@yeah.net\n',
+                        description: '',
+                        school: ''
+                    },
+                    {
+                        logo: 'assets/schoolLogo/guangzhou.png',
+                        name: 'Guangzhou Foreign Language School 广州外国语学校',
+                        email: 'Dave17771799901@gmail.com',
                         description: '',
                         school: ''
                     },
                     {
                         logo: 'assets/schoolLogo/C15.png',
                         name: 'Xi\'an Foreign Language School 西安外国语国际部',
-                        email: 'service.council@keystoneacademy.cn',
+                        email: '15891570218@163.com',
                         description: '',
                         school: ''
                     },
                     {
                         logo: 'assets/schoolLogo/C16.jpg',
                         name: 'NLCSS',
-                        email: 'service.council@keystoneacademy.cn',
+                        email: 'Tiffanywang2006@outlook.com',
                         description: '',
                         school: ''
                     },
