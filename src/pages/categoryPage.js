@@ -56,7 +56,7 @@ const ItemCard = ({ item }) => {
                 <h3 className="text-xl font-semibold text-white mb-2 text-center">{item.name || 'No Name'}</h3>
                 {item.email && (
                     <p
-                        className="text-gray-300 text-center cursor-pointer" //the email text place
+                        className="text-gray-300 text-center cursor-pointer" // Email text
                         onClick={() => copyToClipboard(item.email)} // Clickable if email exists
                     >
                         Email: {item.email}
@@ -64,14 +64,18 @@ const ItemCard = ({ item }) => {
                 )}
                 <div
                     className="text-[#9ECBFF] mb-2 text-center"
-                    dangerouslySetInnerHTML={{ __html: item.description || '' }} // Fallback for description
+                    dangerouslySetInnerHTML={{ __html: item.website || '' }} // Updated to website
                 />
+                {item.description && (
+                    <div className="text-gray-300 text-left" style={{ whiteSpace: 'pre-line' }}>
+                        {item.description}
+                    </div>
+                )}
                 {item.school && <p className="text-[#ffffff] text-left">School: {item.school}</p>}
             </div>
         </motion.div>
     );
 };
-
 
 const SubcategorySection = ({ subcategory }) => (
     <div className="mb-12">

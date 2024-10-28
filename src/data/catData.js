@@ -11,13 +11,13 @@ export const categoriesData = [
                         logo: 'assets/partner/B2.png',
                         name: '斯坦福大学医学院亚裔肝脏中心 | ALC',
                         email: 'jadeinchina@163.com',
-                        description: '<a href="https://med.stanford.edu/liver.html" target="_blank" rel="noopener noreferrer">Official Website</a>'
+                        website: '<a href="https://med.stanford.edu/liver.html" target="_blank" rel="noopener noreferrer">Official Website</a>'
                     },
                     {
                         logo: 'assets/partner/B1.png',
                         name: 'FinTeens',
                         email: '',
-                        description: '<a href="https://www.fin-teens.com/home" target="_blank" rel="noopener noreferrer">Official Website</a>' +
+                        website: '<a href="https://www.fin-teens.com/home" target="_blank" rel="noopener noreferrer">Official Website</a>' +
                             '<br>' +  // Line break
                             '<a href="https://docs.google.com/forms/d/e/1FAIpQLSeLNUc0hb8o1Ny0GMKYl6ZyVhptCQRmNzcgk1VltF8ZQ8qqKg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">FinTeens member form (open to everyone)</a>'
                     },
@@ -25,7 +25,7 @@ export const categoriesData = [
                         logo: 'assets/partner/B3.png',
                         name: '食尚 | Health and Wellness',
                         email: 'info@healthandwellness.com.cn',
-                        description: '<a href="https://www.healthandwellness.com.cn/" target="_blank" rel="noopener noreferrer">Official Website</a>'
+                        website: '<a href="https://www.healthandwellness.com.cn/" target="_blank" rel="noopener noreferrer">Official Website</a>'
                     },
                     {
                         //logo: 'assets/partner/filmFestival.png',
@@ -49,13 +49,13 @@ export const categoriesData = [
                         //logo: 'assets/partner/Dispatio.png',
                         name: 'Dispatio',
                         email: '',
-                        description: ''
+                        description : `Dispatio is dedicated to building an online community revolving around perceiving our surroundings with use of critical thinking. Dispatio consists of two components. One being the monthly online articles from student submissions, to date, we published 20 articles. The other being the online courses which cover content ranging from American history to reading and critical thinking.\nDispatio 致力于建立一个以批判性思考的角度看待社会为中心的在线社区。Dispatio 由两部分组成。一、每个月发布学生投稿的，截至目前，我们已经发表了 20 篇文章。另一个是在线课程，内容涵盖美国历史、阅读和批判性思维。`
                     },
                     {
                         //logo: 'assets/partner/Curieux.png',
                         name: 'Curieux',
                         email:  'cajjournal@gmail.com',
-                        description: '<a href="https://www.curieuxacademiciournal.com/" target="_blank" rel="noopener noreferrer">Official Website</a>'
+                        website: '<a href="https://www.curieuxacademiciournal.com/" target="_blank" rel="noopener noreferrer">Official Website</a>'
                     },
                     // More partners...
                 ]
