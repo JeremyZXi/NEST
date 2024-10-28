@@ -31,7 +31,10 @@ const LogoCarousel = () => {
 
     return (
         <div className="relative py-8 overflow-hidden">
-            <div className="bg-[#000000] py-4"> {/* can replace with black */}
+            <div className="bg-[#000000] py-4 relative"> {/* Background color */}
+                <div className="absolute top-0 left-0 right-0 border-t-2 border-gray-400"></div> {/* Top horizontal line */}
+                <div className="absolute bottom-0 left-0 right-0 border-b-2 border-gray-400"></div> {/* Bottom horizontal line */}
+
                 <Swiper
                     loop={true}
                     ref={swiperRef}
@@ -40,21 +43,11 @@ const LogoCarousel = () => {
                     grabCursor={true} // Change cursor to a grab icon
                     breakpoints={{
                         // Define breakpoints for responsive behavior
-                        640: {
-                            slidesPerView: 3,
-                        },
-                        768: {
-                            slidesPerView: 4,
-                        },
-                        1024: {
-                            slidesPerView: 5,
-                        },
-                        1280: {
-                            slidesPerView: 6,
-                        },
-                        1536: {
-                            slidesPerView: 7,
-                        },
+                        640: { slidesPerView: 3 },
+                        768: { slidesPerView: 4 },
+                        1024: { slidesPerView: 5 },
+                        1280: { slidesPerView: 6 },
+                        1536: { slidesPerView: 7 },
                     }}
                 >
                     {logos.map((logo, index) => (
@@ -70,7 +63,10 @@ const LogoCarousel = () => {
                                     }}
                                 />
                             ) : (
-                                <span className="text-gray-400 text-center">{logo.name}</span>
+                                <div className="flex items-center h-full text-center">
+                                    <div className="border-l-2 border-white h-8 mr-2"></div> {/* Reduced height of vertical line */}
+                                    <span className="text-2xl text-white flex items-center" style={{ lineHeight: '2' }}>{logo.name}</span> {/* Adjusted line height */}
+                                </div>
                             )}
                         </SwiperSlide>
                     ))}

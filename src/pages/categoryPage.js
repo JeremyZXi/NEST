@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Navbar from "../components/Navbar";
@@ -6,38 +6,72 @@ import Footer from "../components/Footer";
 import navLinks from "../data/navLinks";
 import categoriesData from "../data/catData";
 
-const ItemCard = ({ item }) => (
-    <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className="bg-black p-4 rounded-lg flex flex-col items-center"
-    >
-        <div className="mb-4 w-40 h-40 flex bg-white rounded-full items-center justify-center overflow-hidden relative">
-            {item.logo ? (
-                <img src={item.logo} alt={item.name} className="w-full h-full object-contain" />
-            ) : (
-                <div className="w-full h-full flex items-center justify-center bg-white">
-                    <img
-                        src="/assets/white.png" // Specify your white background image path
-                        alt="No Logo"
-                        className="absolute w-full h-full object-cover"
-                    />
-                    <span className="text-gray-400 text-center z-10">{item.name}</span>
+const ItemCard = ({ item }) => {
+    const [showPopup, setShowPopup] = useState(false);
+
+    const copyToClipboard = (email) => {
+        navigator.clipboard.writeText(email)
+            .then(() => {
+                setShowPopup(true); // Show popup on successful copy
+                setTimeout(() => setShowPopup(false), 2000); // Hide popup after 2 seconds
+            })
+            .catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+    };
+
+    if (!item) {
+        return null; // Early return if item is undefined
+    }
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="bg-black p-4 rounded-lg flex flex-col items-center relative"
+        >
+            {showPopup && (
+                <div className="fixed inset-0 flex items-center justify-center z-50">
+                    <div className="bg-[#8C6BD4] text-white p-4 rounded shadow-lg">
+                        Email copied to clipboard!
+                    </div>
                 </div>
             )}
-        </div>
-        <div className="flex-grow w-full">
-            <h3 className="text-xl font-semibold text-white mb-2 text-center">{item.name}</h3>
-            <p className="text-gray-300 mb-2 text-center">{item.email}</p>
-            <div
-                className="text-gray-400 mb-2 text-left"
-                dangerouslySetInnerHTML={{ __html: item.description }}
-            />
-            {item.school && <p className="text-gray-400 text-left">School: {item.school}</p>}
-        </div>
-    </motion.div>
-);
+            <div className="mb-4 w-40 h-40 flex bg-white rounded-full items-center justify-center overflow-hidden relative">
+                {item.logo ? (
+                    <img src={item.logo} alt={item.name} className="w-full h-full object-contain" />
+                ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-white">
+                        <img
+                            src="/assets/white.png" // Specify your white background image path
+                            alt="No Logo"
+                            className="absolute w-full h-full object-cover"
+                        />
+                        <span className="text-black font-bold text-center z-10">{item.name || 'No Name'}</span>
+                    </div>
+                )}
+            </div>
+            <div className="flex-grow w-full">
+                <h3 className="text-xl font-semibold text-white mb-2 text-center">{item.name || 'No Name'}</h3>
+                {item.email && (
+                    <p
+                        className="text-gray-300 text-center cursor-pointer" //the email text place
+                        onClick={() => copyToClipboard(item.email)} // Clickable if email exists
+                    >
+                        Email: {item.email}
+                    </p>
+                )}
+                <div
+                    className="text-[#9ECBFF] mb-2 text-center"
+                    dangerouslySetInnerHTML={{ __html: item.description || '' }} // Fallback for description
+                />
+                {item.school && <p className="text-[#ffffff] text-left">School: {item.school}</p>}
+            </div>
+        </motion.div>
+    );
+};
+
 
 const SubcategorySection = ({ subcategory }) => (
     <div className="mb-12">
