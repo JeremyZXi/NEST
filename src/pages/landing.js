@@ -18,7 +18,7 @@ import DataDisplay from "../components/NestData";
 
 import categoriesData from "../data/catData";
 
-import LogoCarousel from "../components/ui/logoCarousel";
+import LogoCarousel from "../components/logoCarousel2";
 /*
 const LogoCarousel = ({ logos }) => {
     const [ref, inView] = useInView({

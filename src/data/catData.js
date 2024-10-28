@@ -30,7 +30,8 @@ export const categoriesData = [
                     {
                         logo: 'assets/partner/B3.png',
                         name: '食尚 | Health and Wellness',
-                        email: 'info@healthandwellness.com.cn',
+                        email: 'info@healthandwellness.com.cn\n' +
+                            'https://www.healthandwellness.com.cn/',
                         description: 'Empowering People for a Safe, Healthy, Sustainable Present and Future<br>' +
                             '赋能安全、健康、可持续的当下与未来<br>' +
                             'Health and Wellness is dedicated to promoting a natural, ecological, sustainable, and healthy lifestyle.\n' +
@@ -41,27 +42,34 @@ export const categoriesData = [
                             '帮助的群体，帮助他们提升自给自足能力，并通过慈善活动资助教育项目，推动社区的全面健康发展。'
                     },
                     {
-                        logo: 'assets/partner/filmFestival.png',
+                        //logo: 'assets/partner/filmFestival.png',
                         name: 'Film Festival by Joanna',
                         email: 'filmiefilmks@gmail.com',
                         description: ''
                     },
                     {
-                        logo: 'assets/partner/CTSA.png',
+                        //logo: 'assets/partner/CTSA.png',
                         name: 'CTSA Speeching & Social Activism',
                         email: '',
                         description: ''
                     },
                     {
-                        logo: 'assets/partner/Bingo.png',
+                        //logo: 'assets/partner/Bingo.png',
                         name: 'Bingo Translation Group',
                         email: '',
                         description: ''
                     },
                     {
-                        logo: 'assets/partner/Dispatio.png',
+                        //logo: 'assets/partner/Dispatio.png',
                         name: 'Dispatio',
                         email: '',
+                        description: ''
+                    },
+                    {
+                        //logo: 'assets/partner/Curieux.png',
+                        name: 'Curieux',
+                        email: 'https://www.curieuxacademicjournal.com/\n' +
+                            'cajjournal@gmail.com',
                         description: ''
                     },
                     // More partners...
@@ -207,7 +215,7 @@ export const categoriesData = [
                         school: ''
                     },
                     {
-                        logo: 'assets/schoolLogo/C16.jpg',
+                        logo: 'assets/schoolLogo/C16.png',
                         name: 'NLCSS',
                         email: 'Tiffanywang2006@outlook.com',
                         description: '',
