@@ -9,7 +9,7 @@ export const categoriesData = [
                 items: [
                     {
                         logo: 'assets/partner/B2.png',
-                        name: '斯坦福大学医学院亚裔肝脏中心 | ALC',
+                        name: '斯坦福大学医学院亚裔肝脏中心 | Asian Liver Center-Stanford Medicine',
                         email: 'jadeinchina@163.com',
                         website: '<a href="https://med.stanford.edu/liver.html" target="_blank" rel="noopener noreferrer">Official Website</a>'
                     },
