@@ -35,7 +35,7 @@ export const categoriesData = [
                             'FilmieFilm Festival is a film festival for teenagers initiated by students from Keystone Academy in Beijing. We are dedicated to promoting film education, connecting and gathering youth film enthusiasts, sharing original films by Chinese youth, and providing opportunities to interact with film professionals.\n'
                     },
                     {
-                        logo: 'assets/partner/Dispatio.jpg',
+                        logo: 'assets/partner/Dispatio.png',
                         name: 'Dispatio',
                         email: 'dispatio2022@outlook.com',
                         website: '<a href="https://dispatio.wordpress.com" target="_blank" rel="noopener noreferrer">Official Website</a>',
