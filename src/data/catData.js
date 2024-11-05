@@ -28,10 +28,29 @@ export const categoriesData = [
                         website: '<a href="https://www.healthandwellness.com.cn/" target="_blank" rel="noopener noreferrer">Official Website</a>'
                     },
                     {
-                        //logo: 'assets/partner/filmFestival.png',
-                        name: 'Film Festival by Joanna',
+                        logo: 'assets/partner/FilmieFilm2.png',
+                        name: 'FilmieFilm Festival',
                         email: 'filmiefilmks@gmail.com',
-                        description: ''
+                        description: '影迹电影节（FilmieFilm Festival）是一场由北京市鼎石学校学生发起的青少年电影节。我们致力于促进青少年电影教育，连接、聚集青少年电影爱好者，分享中国青少年的原创影片，并提供与电影专业人士互动的机会。\n' +
+                            'FilmieFilm Festival is a film festival for teenagers initiated by students from Keystone Academy in Beijing. We are dedicated to promoting film education, connecting and gathering youth film enthusiasts, sharing original films by Chinese youth, and providing opportunities to interact with film professionals.\n'
+                    },
+                    {
+                        logo: 'assets/partner/Dispatio.jpg',
+                        name: 'Dispatio',
+                        email: 'dispatio2022@outlook.com',
+                        website: '<a href="https://dispatio.wordpress.com" target="_blank" rel="noopener noreferrer">Official Website</a>',
+                        description : `Dispatio is dedicated to building an online community revolving around perceiving our surroundings with use of critical thinking. Dispatio consists of two components. One being the monthly online articles from student submissions, to date, we published 20 articles. The other being the online courses which cover content ranging from American history to reading and critical thinking.\nDispatio 致力于建立一个以批判性思考的角度看待社会为中心的在线社区。Dispatio 由两部分组成。一、每个月发布学生投稿的，截至目前，我们已经发表了 20 篇文章。另一个是在线课程，内容涵盖美国历史、阅读和批判性思维。`
+                    },
+                    {
+                        logo: 'assets/partner/Bingo.png',
+                        name: 'Bingo Translation Group',
+                        email: 'yehongru8@163.com',
+                        description: 'Founded in 2022, the Bingo Translation Group aims to foster mutual assistance and intercultural understanding through bilingual translation services. We envision a future where language differences no longer hinder cooperation among diverse cultures, leading to increased mutual support on a global scale.\n' +
+                            '缤果翻译成立于 2022 年，致力于通过双语翻译服务促进国际间的互助与跨文化理解。在我们憧憬中的未来中，语言的隔阂将不再阻碍不同文化之间的互助和理解。\n' +
+                            'We provide English-to-Chinese and offer Chinese-to-English translation services, including documents, data, reports, video transcripts, interpretation etc. \n' +
+                            '我们提供中英互译服务：涵盖文件、数据、报告等任何形式。\n' +
+                            'The Bingo Translation Group comprises 50+ bilingual volunteers from around the world. we are the exclusive translation partner for the Chinese Red Cross Foundation\'s "Free Lunch for Children" initiative, completing over 200 monthly, annual, and financial reports from recipient schools. Other partners include educational foundations, UN projects and untangible heritage protection causes.  \n' +
+                            '缤果翻译拥有来自全球的 50+ 名志愿者。 我们与中国红十字基金会合作，独家翻译“国际免费午餐”项目，已完成 200 余份月度、年度和财务报告。其他合作伙伴包括教育基金会，联合国项目，非遗保护组织等。\n'
                     },
                     {
                         //logo: 'assets/partner/CTSA.png',
@@ -40,22 +59,12 @@ export const categoriesData = [
                         description: ''
                     },
                     {
-                        //logo: 'assets/partner/Bingo.png',
-                        name: 'Bingo Translation Group',
-                        email: '',
-                        description: ''
-                    },
-                    {
-                        //logo: 'assets/partner/Dispatio.png',
-                        name: 'Dispatio',
-                        email: '',
-                        description : `Dispatio is dedicated to building an online community revolving around perceiving our surroundings with use of critical thinking. Dispatio consists of two components. One being the monthly online articles from student submissions, to date, we published 20 articles. The other being the online courses which cover content ranging from American history to reading and critical thinking.\nDispatio 致力于建立一个以批判性思考的角度看待社会为中心的在线社区。Dispatio 由两部分组成。一、每个月发布学生投稿的，截至目前，我们已经发表了 20 篇文章。另一个是在线课程，内容涵盖美国历史、阅读和批判性思维。`
-                    },
-                    {
                         //logo: 'assets/partner/Curieux.png',
                         name: 'Curieux',
                         email:  'cajjournal@gmail.com',
-                        website: '<a href="https://www.curieuxacademiciournal.com/" target="_blank" rel="noopener noreferrer">Official Website</a>'
+                        website: '<a href="https://www.curieuxacademiciournal.com/" target="_blank" rel="noopener noreferrer">Official Website</a>',
+                        description: 'The Curieux Academic Journal is a youth-led nonprofit  founded in 2017 to publish exceptional research by high school and middle school students.\n' +
+                            'Curieux 学术期刊是一个由青年领导的非营利组织，创办于 2017 年，旨在发表高中和初中学生的杰出研究成果。\n'
                     },
                     // More partners...
                 ]
