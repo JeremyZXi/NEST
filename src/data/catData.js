@@ -11,7 +11,9 @@ export const categoriesData = [
                         logo: 'assets/partner/B2.png',
                         name: '斯坦福大学医学院亚裔肝脏中心 | Asian Liver Center-Stanford Medicine',
                         email: 'jadeinchina@163.com',
-                        website: '<a href="https://med.stanford.edu/liver.html" target="_blank" rel="noopener noreferrer">Official Website</a>'
+                        website: '<a href="https://med.stanford.edu/liver.html" target="_blank" rel="noopener noreferrer">Official Website</a>',
+                        description: 'The Asian Liver Center at Stanford University is the first non-profit organization in the United States that addresses the disproportionately high rates of chronic hepatitis B infection and liver cancer in Asians and Asian Americans. Founded in 1996, the center addresses the gaps in the fight against hepatitis B through a four-pronged approach of collaboration, advocacy, research, and education & outreach (CARE). The ultimate goal of the Center is to eliminate the transmission and stigma of hepatitis B, and reduce deaths from liver cancer and liver disease caused by chronic hepatitis B.\n' +
+                            '斯坦福医学院苏启深教授所建立的美国斯坦福大学亚裔肝脏中心是美国第一个针对亚洲人和亚裔的乙肝防治而成立的非营利机构。该中心由斯坦福大学医学院的外科教授苏启深博士成立于1996年，以在全球消除乙型肝炎为目标，健康教育和科学研究为主，开展各种针对乙肝防治的公益活动，并号召并发起了全球的防治乙肝的翡翠丝带项目\n'
                     },
                     {
                         logo: 'assets/partner/B1.png',
@@ -19,13 +21,17 @@ export const categoriesData = [
                         email: '',
                         website: '<a href="https://www.fin-teens.com/home" target="_blank" rel="noopener noreferrer">Official Website</a>' +
                             '<br>' +  // Line break
-                            '<a href="https://docs.google.com/forms/d/e/1FAIpQLSeLNUc0hb8o1Ny0GMKYl6ZyVhptCQRmNzcgk1VltF8ZQ8qqKg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">FinTeens member form (open to everyone)</a>'
+                            '<a href="https://docs.google.com/forms/d/e/1FAIpQLSeLNUc0hb8o1Ny0GMKYl6ZyVhptCQRmNzcgk1VltF8ZQ8qqKg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">FinTeens member form (open to everyone)</a>',
+                        description: 'Finteens is a global youth finance community headquartered in Los Angeles, with members from over 50 countries, including high school and college students from top universities like Cornell, Georgetown, UCLA, and LSE! As part of our network, you’ll gain exclusive access to insightful seminars, interviews with top executives from the finance industry, and renowned professors from prestigious universities.  FinTeens是一个总部位于洛杉矶的全球青年金融社区，成员来自 50 多个国家，包括来自康奈尔大学、乔治城大学、加州大学洛杉矶分校和伦敦政治经济学院等顶尖大学的高中生和大学生！'
                     },
                     {
                         logo: 'assets/partner/B3.png',
                         name: '食尚 | Health and Wellness',
                         email: 'info@healthandwellness.com.cn',
-                        website: '<a href="https://www.healthandwellness.com.cn/" target="_blank" rel="noopener noreferrer">Official Website</a>'
+                        website: '<a href="https://www.healthandwellness.com.cn/" target="_blank" rel="noopener noreferrer">Official Website</a>',
+                        description: 'Empowering People for a Safe, Healthy, Sustainable Present and Future 赋能安全、健康、可持续的当下与未来\n' +
+                            'Health and Wellness is dedicated to promoting a natural, ecological, sustainable, and healthy lifestyle. Through workshops and seminars, we support organic farmers and raise public awareness of healthy and mindful eating, fostering a stronger connection between farm and table. We focus on empowering underserved communities to enhance self-sufficiency and fund educational initiatives through charitable activities, fostering overall community well-being, food safety, food security, and sustainability.\n' +
+                            '食尚致力于促进自然、生态、可持续和健康的生活方式。通过研讨会和实践工作坊，支持生态种植践行者和农民并提高公众对健康饮食的意识。我们特别关注需要帮助的群体，帮助他们提升自给自足能力，并通过慈善活动资助教育项目，推动社区的全面健康发展。\n'
                     },
                     {
                         logo: 'assets/partner/FilmieFilm2.png',
@@ -38,7 +44,7 @@ export const categoriesData = [
                         logo: 'assets/partner/Dispatio.png',
                         name: 'Dispatio',
                         email: 'dispatio2022@outlook.com',
-                        website: '<a href="https://dispatio.wordpress.com" target="_blank" rel="noopener noreferrer">Official Website</a>',
+                        website: '<a href="https://dispatio.wordpress.com/" target="_blank" rel="noopener noreferrer">Official Website</a>',
                         description : `Dispatio is dedicated to building an online community revolving around perceiving our surroundings with use of critical thinking. Dispatio consists of two components. One being the monthly online articles from student submissions, to date, we published 20 articles. The other being the online courses which cover content ranging from American history to reading and critical thinking.\nDispatio 致力于建立一个以批判性思考的角度看待社会为中心的在线社区。Dispatio 由两部分组成。一、每个月发布学生投稿的，截至目前，我们已经发表了 20 篇文章。另一个是在线课程，内容涵盖美国历史、阅读和批判性思维。`
                     },
                     {
@@ -46,11 +52,7 @@ export const categoriesData = [
                         name: 'Bingo Translation Group',
                         email: 'yehongru8@163.com',
                         description: 'Founded in 2022, the Bingo Translation Group aims to foster mutual assistance and intercultural understanding through bilingual translation services. We envision a future where language differences no longer hinder cooperation among diverse cultures, leading to increased mutual support on a global scale.\n' +
-                            '缤果翻译成立于 2022 年，致力于通过双语翻译服务促进国际间的互助与跨文化理解。在我们憧憬中的未来中，语言的隔阂将不再阻碍不同文化之间的互助和理解。\n' +
-                            'We provide English-to-Chinese and offer Chinese-to-English translation services, including documents, data, reports, video transcripts, interpretation etc. \n' +
-                            '我们提供中英互译服务：涵盖文件、数据、报告等任何形式。\n' +
-                            'The Bingo Translation Group comprises 50+ bilingual volunteers from around the world. we are the exclusive translation partner for the Chinese Red Cross Foundation\'s "Free Lunch for Children" initiative, completing over 200 monthly, annual, and financial reports from recipient schools. Other partners include educational foundations, UN projects and untangible heritage protection causes.  \n' +
-                            '缤果翻译拥有来自全球的 50+ 名志愿者。 我们与中国红十字基金会合作，独家翻译“国际免费午餐”项目，已完成 200 余份月度、年度和财务报告。其他合作伙伴包括教育基金会，联合国项目，非遗保护组织等。\n'
+                            '缤果翻译成立于 2022 年，致力于通过双语翻译服务促进国际间的互助与跨文化理解。在我们憧憬中的未来中，语言的隔阂将不再阻碍不同文化之间的互助和理解。\n'
                     },
                     {
                         //logo: 'assets/partner/CTSA.png',
