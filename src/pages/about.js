@@ -221,7 +221,7 @@ function About() {
                 <HeroGeneral title="NEST" subtitle="is a network of service activists, leaders, and organizations across high schools in China/the world." />
                 <MissionVision />
                 <ExecutiveTeam />
-                <TeamsHead />
+                {/*<TeamsHead />*/}
                 {/*<History />*/}
                 <SocialMediaContact />
                 <Footer />
