@@ -1,8 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import emailjs from 'emailjs-com';
-
+const emailjsUserId = process.env.REACT_APP_EMAILJS_USER_ID;
+const emailjsTemplateKey = process.env.REACT_APP_EMAILJS_TEMPLATE_KEY;
+const emailjsServiceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const emailjsReceiver = process.env.REACT_APP_EMAILJS_RECEIVER;
+const turnstileSiteKey = process.env.REACT_APP_TURNSTILE_SITEKEY;
 // Initialize EmailJS with your user ID
-emailjs.init("FzfvItSTzWck2Mipl");
+emailjs.init(emailjsUserId);
 
 function FeedbackForm() {
     const [name, setName] = useState('');
@@ -33,7 +37,7 @@ function FeedbackForm() {
     useEffect(() => {
         if (isTurnstileLoaded && turnstileRef.current) {
             window.turnstile.render(turnstileRef.current, {
-                sitekey: '0x4AAAAAAAkVP6d12WMzfOMu', // Replace with your actual Turnstile site key
+                sitekey: turnstileSiteKey, // Replace with your actual Turnstile site key
                 callback: function(token) {
                     setTurnstileToken(token);
                 },
@@ -56,13 +60,13 @@ function FeedbackForm() {
             const templateParams = {
                 from_name: name || 'Anonymous',
                 from_email: email || 'Not provided',
-                to_email: 'nest.executives@outlook.com',
+                to_email: emailjsReceiver,
                 message: feedback
             };
 
             const response = await emailjs.send(
-                'service_zmganv4',
-                'template_rg2jspp',
+                emailjsServiceId,
+                emailjsTemplateKey,
                 templateParams
             );
 
