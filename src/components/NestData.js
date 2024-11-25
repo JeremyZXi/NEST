@@ -17,8 +17,8 @@ const DataDisplay = () => {
 
     const data = [
         { label: 'Months Since Launch', value: monthsSinceLaunch, icon: ArrowUp },
-        { label: 'NEST Members', value: 16, icon: Users },
-        { label: 'NEST Partners', value: 6, icon: Building },
+        { label: 'NEST Members', value: 21, icon: Users },
+        { label: 'NEST Partners', value: 12, icon: Building },
     ];
 
     const containerVariants = {
