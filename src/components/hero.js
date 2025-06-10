@@ -45,7 +45,7 @@ const Hero = () => {
                         >
                             <h2 className="text-3xl font-bold mb-4">
                                 <motion.span className="inline-block mr-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }}>Network for</motion.span>
-                                <motion.span className="inline-block mr-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>Enriching Service</motion.span>
+                                <motion.span className="inline-block mr-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>Enhancing Service</motion.span>
                                 <motion.span className="inline-block" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>Transformation</motion.span>
                             </h2>
                         </motion.div>
